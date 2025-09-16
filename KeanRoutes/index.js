@@ -1,1 +1,1 @@
-document.getElementById("testo").textContent = "Hello there!";
+document.getElementById("testo").textContent = "This is the main section of the body";

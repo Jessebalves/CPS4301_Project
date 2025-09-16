@@ -1,3 +1,17 @@
 body{
     font-family: 'Courier New', Courier, monospace;
 }
+
+header{
+    text-align: center;
+    color:rgb(15, 15, 150);
+}
+
+footer{
+    text-align: center;
+}
+
+#kean_logo{
+    width: 5%;
+    height: 5%;
+}
