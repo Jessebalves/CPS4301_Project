@@ -16,32 +16,35 @@ footer{
     height: 5%;
 }
 
+#navigation_bar{
+    width: 90%; /* Or any specific width */
+    margin: auto; 
+}
 #navigation_bar li{
     color: white;
     border: 1px solid black;
     padding: 2%;
-    display:block;
-    margin-left: 0%;
-    margin-right: 0%;
+    display:inline-block;
     width: 100%;
     text-align: center;
 }
 
+
 #navigation_bar li{
-    background-color:hsl(0, 14%, 39%); 
+    background-color:hsl(249, 80%, 30%); 
 }
+
+
 
 /* When hovering over the navigation bar */
 #navigation_bar li:hover{
     background-color:hsl(0, 49%, 42%);
 }
 
-#home{
-    background-color:hsl(0, 14%, 39%);
-}
+
 
 #navigation_bar li{
     float:none;
-    width: 100%;
+    width: 80%;
 
 }
