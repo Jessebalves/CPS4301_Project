@@ -16,35 +16,46 @@ footer{
     height: 5%;
 }
 
-#navigation_bar{
-    width: 90%; /* Or any specific width */
-    margin: auto; 
-}
-#navigation_bar li{
-    color: white;
-    border: 1px solid black;
-    padding: 2%;
-    display:inline-block;
-    width: 100%;
-    text-align: center;
+#navigation_bar {
+  margin: 0%;
+  text-align: center;
 }
 
+#navigation_bar li {
+  display: block;
+  position: relative;
+  float: left;
+  background-color:hsl(249, 80%, 30%);
+}
 
-#navigation_bar li{
-    background-color:hsl(249, 80%, 30%); 
+#navigation_bar ul {
+  position: absolute;
+  display: none;
+  padding: 0;
+}
+
+#navigation_bar li a {
+  display: block;
+  padding: 0;
+  text-decoration: none;
+  width: 450px;
+  line-height: 70px;
+  color: #ffffff;
+}
+
+#navigation_bar li li a {
+  font-size: 75%;
+}
+
+#nav li:hover ul ul {
+  display: none;
 }
 
 
-
-/* When hovering over the navigation bar */
-#navigation_bar li:hover{
-    background-color:hsl(0, 49%, 42%);
+#navigation_bar li:hover {
+  background-color:hsl(0, 49%, 42%);
 }
 
-
-
-#navigation_bar li{
-    float:none;
-    width: 80%;
-
+#navigation_bar li:hover ul {
+  display: block;
 }
