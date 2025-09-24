@@ -47,11 +47,6 @@ footer{
   font-size: 75%;
 }
 
-#nav li:hover ul ul {
-  display: none;
-}
-
-
 #navigation_bar li:hover {
   background-color:hsl(0, 49%, 42%);
 }
