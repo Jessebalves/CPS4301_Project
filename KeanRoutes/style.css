@@ -39,13 +39,16 @@ footer{
   padding: 0;
   text-decoration: none;
   width: 450px;
-  line-height: 70px;
+  line-height: 400%;
   color: #ffffff;
+  border:1px solid black;
+  float: none;
 }
 
 #navigation_bar li li a {
   font-size: 75%;
 }
+
 
 #navigation_bar li:hover {
   background-color:hsl(0, 49%, 42%);
