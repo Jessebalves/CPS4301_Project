@@ -1,3 +1,4 @@
+/*Normal html elements*/
 body{
     font-family: 'Courier New', Courier, monospace;
 }
@@ -11,6 +12,7 @@ footer{
     text-align: center;
 }
 
+/*Ids associated with html elements*/
 #kean_logo{
     width: 5%;
     height: 5%;
@@ -38,7 +40,7 @@ footer{
   display: block;
   padding: 0;
   text-decoration: none;
-  width: 450px;
+  width: 200px;
   line-height: 400%;
   color: #ffffff;
   border:1px solid black;
@@ -56,4 +58,35 @@ footer{
 
 #navigation_bar li:hover ul {
   display: block;
+}
+
+#navigation_bar li li:hover ul {
+  display: block;
+  margin-left: 200px;
+  margin-top: -50px;
+  border:1px solid black;
+}
+
+#navigation_bar ul ul li{
+  background: white;
+}
+
+#navigation_bar ul ul li:hover{
+  display:none;
+}
+
+
+#navigation_bar ul ul li a{
+  color:black;
+}
+
+/*Classes associated with html elements*/
+.navigation_bar_container { 
+    display: flex;
+    justify-content: center;
+}
+
+.map_container{
+  display:flex;
+  justify-content: center;
 }
