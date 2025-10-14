@@ -1,11 +1,12 @@
 /*Normal html elements*/
 body{
-    font-family: 'Courier New', Courier, monospace;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header{
     text-align: center;
-    color:rgb(15, 15, 150);
+    /*color:rgb(15, 15, 150);*/
+    color: black; 
 }
 
 footer{
@@ -71,6 +72,10 @@ footer{
   background: white;
 }
 
+#navigation_bar ul ul li p{
+  font-size: larger;
+}
+
 #navigation_bar ul ul li:hover{
   display:none;
 }
@@ -89,4 +94,10 @@ footer{
 .map_container{
   display:flex;
   justify-content: center;
+}
+
+.tilte_container{
+  display:flex;
+  justify-content: center;
+  align-items:center;
 }
