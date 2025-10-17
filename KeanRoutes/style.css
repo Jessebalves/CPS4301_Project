@@ -3,6 +3,7 @@ body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
+    background-color:hsl(260, 16%, 96%);
 }
 
 header{
@@ -14,8 +15,9 @@ header{
 
 footer{
     text-align: center;
-    color: white;
-    background-color: hsl(249, 80%, 30%);
+    color: black;
+    background-color: hsl(260, 16%, 96%);
+    overflow: auto;
 }
 
 /*Ids associated with html elements*/
@@ -69,7 +71,7 @@ footer{
 #navigation_bar li li:hover ul {
   display: block;
   margin-left: 200px;
-  margin-top: -50px;
+  margin-top: -100px;
   border:1px solid black;
 }
 
@@ -105,4 +107,14 @@ footer{
   display:flex;
   justify-content: center;
   align-items:center;
+}
+
+.person_container{
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+}
+
+.dev_contain{
+  display: inline-flex;
 }
