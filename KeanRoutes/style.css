@@ -11,6 +11,7 @@ header{
     /*color:rgb(15, 15, 150);*/
     color: white; 
     background-color: hsl(249, 80%, 30%);
+    border-bottom: 1px solid hsl(249, 80%, 30%);
 }
 
 footer{
@@ -22,8 +23,8 @@ footer{
 
 /*Ids associated with html elements*/
 #kean_logo{
-    width: 7%;
-    height: 7%;
+    width: 9%;
+    height: 9%;
 }
 
 #navigation_bar {
@@ -36,6 +37,7 @@ footer{
   position: relative;
   float: left;
   background-color:hsl(249, 80%, 30%);
+  border-bottom: 1px solid white;
 }
 
 #navigation_bar ul {
@@ -51,45 +53,54 @@ footer{
   width: 200px;
   line-height: 400%;
   color: #ffffff;
-  border:1px solid black;
   float: none;
 }
+
 
 #navigation_bar li li a {
   font-size: 75%;
 }
 
 
-#navigation_bar li:hover {
+#navigation_bar li:hover, li:active, li.click{
   background-color:hsl(0, 49%, 42%);
 }
 
-#navigation_bar li:hover ul {
+#navigation_bar li:hover ul, li:active ul {
   display: block;
 }
 
-#navigation_bar li li:hover ul {
+
+/*Side bar description box*/
+#navigation_bar li li:hover ul, li li:active ul{
   display: block;
   margin-left: 200px;
   margin-top: -100px;
   border:1px solid black;
 }
 
+#navigation_bar li li ul, li li:active ul{
+ border: 4px solid black;
+ margin-top: -10000px;
+}
+
 #navigation_bar ul ul li{
   background: white;
+  
 }
 
 #navigation_bar ul ul li p{
   font-size: larger;
 }
 
-#navigation_bar ul ul li:hover{
+#navigation_bar ul ul li:hover, ul ul li:active{
   display:none;
 }
 
 
 #navigation_bar ul ul li a{
   color:black;
+  width:220px;
 }
 
 /*Classes associated with html elements*/
@@ -107,6 +118,7 @@ footer{
   display:flex;
   justify-content: center;
   align-items:center;
+  gap:1%;
 }
 
 .person_container{
@@ -117,4 +129,18 @@ footer{
 
 .dev_contain{
   display: inline-flex;
+}
+
+.text_container{
+  display: flexbox;
+  text-align: center;
+  gap:1%;
+}
+
+/*For mobile viewing styling*/
+@media screen and (max-width:870px){
+  #navigation_bar li a {
+    width: 100px;
+  }
+
 }

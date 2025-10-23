@@ -1,1 +1,29 @@
-document.getElementById("testo").textContent = "This is the main section of the body";
+//document.getElementById("testo").textContent = "This is the main section of the body";
+
+if (!navigator.geolocation) {
+    throw new Error("No geolocation available");
+    }
+
+        function success(pos) {
+            const lat = pos.coords.latitude;
+            const lng = pos.coords.longitude;
+            const markup = `
+                <a href="https://www.openstreetmap.org/#map=16/${lat}/${lng}">
+                Current position: latitude: ${lat}, longitude: ${lng}.
+                </a>
+            `;
+            document.getElementById('output').innerHTML = markup;
+        }
+
+        function error() {
+            document.getElementById('output').textContent = "Unable to retrieve your location.";
+            alert("Please allow access to geolocation");
+        }
+
+        const options = {
+            enableHighAccuracy: true,
+            timeout: 6000,
+            maximumAge: 0,
+        };
+
+        navigator.geolocation.watchPosition(success, error, options);
