@@ -76,11 +76,9 @@ footer{
   display: block;
   margin-left: 200px;
   margin-top: -100px;
-  border:1px solid black;
 }
 
 #navigation_bar li li ul, li li:active ul{
- border: 4px solid black;
  margin-top: -10000px;
 }
 
@@ -137,10 +135,25 @@ footer{
   gap:1%;
 }
 
+#testoo{
+  right:420px;
+  top:20px;
+}
+
 /*For mobile viewing styling*/
 @media screen and (max-width:870px){
   #navigation_bar li a {
     width: 100px;
   }
+  #navigation_bar li li:hover ul, li li:active ul{
+  display: block;
+  margin-left: 100px;
+  margin-top: -100px;
+}
+
+#testoo{
+  right:320px;
+  top:30px;
+}
 
 }
