@@ -4,6 +4,38 @@
     <meta charset = "UTF-8">
     <title>KeanRoutes</title>
     <link rel = "stylesheet" href = "style.css">
+    <style>
+    #map {
+        width: 750px;
+        height: 600px;
+        border: 0;
+    }
+    .map_container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .controls {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    input {
+        width: 400px;
+        padding: 8px;
+        font-size: 16px;
+    }
+    button {
+        padding: 8px 12px;
+        margin-left: 8px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .text_container {
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+    </style>
     </head>
 
     <body>
@@ -73,7 +105,7 @@
                                 <li><a href="#"><p>Meeting rooms, Health Services, Counseling Services, Campus Ministry, and Police Headquarters</p></a>
                             </ul>                          
                         </li>
- 
+
                         <li><a href="#">Green Lane Academic Building</a>
                             <ul>
                                 <li><a href="#"><p>Houses classrooms, faculty offices, and a full-service bookstore</p></a>
@@ -165,7 +197,7 @@
                         </li>
 
                         <li><a href="#">Rogers Hall</a>
-                             <ul>
+                            <ul>
                                 <li><a href="#"><p>Dormitories.</p></a>
                             </ul>                            
                         </li>
@@ -224,7 +256,7 @@
                     </li>
 
                     <!--Food option list-->
-                   <li><a href="#">Food</a>
+                    <li><a href="#">Food</a>
                     <ul> 
                         <li><a href="#">Chipotle</a>
                         <ul>
@@ -297,19 +329,19 @@
                             </ul>
                         </li>
 
-                         <li><a href="#">Delta</a>
+                        <li><a href="#">Delta</a>
                             <ul>
                                 <li id = "testoo"><a href="#"><p>Gas station [981 Magie Ave, Union, NJ 07083]</p></a>
                             </ul>
                         </li>
 
-                         <li><a href="#">Shell</a>
+                        <li><a href="#">Shell</a>
                             <ul>
                                 <li id = "testoo"><a href="#"><p>Gas station + Convenience store [574 Newark Ave, Elizabeth, NJ 07208]</p></a>
                             </ul>
                         </li>
 
-                         <li><a href="#">EZ Quick</a>
+                        <li><a href="#">EZ Quick</a>
                             <ul>
                                 <li id = "testoo"><a href="#"><p>Gas station [381 Morris Ave, Elizabeth, NJ 07208]</p></a>
                             </ul>
@@ -327,7 +359,7 @@
                             </ul>
                         </li>
 
-                         <li><a href="#">CVS</a>
+                        <li><a href="#">CVS</a>
                             <ul>
                                 <li id = "testoo"><a href="#"><p>Closest pharmacy and retail store to get daily essentials and medicines for campus life. [1105A Morris Ave, Union, NJ 07083]</p></a>
                             </ul>
@@ -375,30 +407,106 @@
         </header>
 
         <main>
-        
-                <br>
-                <div class = "map_container">
-                    <!--Map using Google Maps and iframe--> 
-                    <iframe id ="map" 
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22284.04772128718!2d-74.24544085167292!3d40.67989299304395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1758307820214!5m2!1sen!2sus"
-                    width="750"
-                    height="600"
-                    style="border:0;justify-content: center;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-
-                <div class = "text_container">
-                <h3 id = "testo">Longitude and Latitude </h3>
-                <p><div id="output"></div></p>
-                <h3>Time: </h3>
-                <h3>Distance: </h3>
-                </div>
-
+                <br />
+                    <div class="controls">
+                        <input id="destination-input" type="text" placeholder="Enter destination..." />
+                        <button id="route-btn">Get Route</button>
+                    </div>
+                    <div class="map_container">
+                        <div id="map"></div>
+                    </div>
+                <div class="text_container">
+                    <h3 id="testo">Longitude and Latitude</h3>
+                    <div id="output"></div>
+                    <h3 id="time">Time:</h3>
+                    <h3 id="distance">Distance:</h3>
+                    </div>
         </main>
-
+        <script>
+            let map, directionsService, directionsRenderer, autocomplete;
+            let userLocation = null;
+            function initMap() {
+                //Generating map, route, and displaying route.
+                directionsService = new google.maps.DirectionsService();
+                directionsRenderer = new google.maps.DirectionsRenderer();
+                //Location of the map on the site
+                map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 14,
+                    center: { lat: 40.6799, lng: -74.2454 },
+                });
+                directionsRenderer.setMap(map);
+                const input = document.getElementById("destination-input");
+                autocomplete = new google.maps.places.Autocomplete(input);
+                autocomplete.bindTo("bounds", map);
+                document.getElementById("route-btn").addEventListener("click", getRoute);
+                //Trying to get user's location
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(success, error, {
+                        enableHighAccuracy: true,
+                        timeout: 6000,
+                        maximumAge: 0,
+                    });
+                } else {
+                    document.getElementById("output").textContent = "Geolocation not supported.";
+                }
+            }
+            //Setting marker on your current location
+            function success(pos) {
+                const lat = pos.coords.latitude;
+                const lng = pos.coords.longitude;
+                userLocation = { lat, lng };
+                map.setCenter(userLocation);
+                new google.maps.Marker({
+                    position: userLocation,
+                    map,
+                    title: "Your location",
+                });
+                document.getElementById("output").innerHTML = `
+                    <b>Latitude:</b> ${lat.toFixed(5)}<br>
+                    <b>Longitude:</b> ${lng.toFixed(5)}
+                    `;
+            }
+            function error() {
+                document.getElementById("output").textContent = "Unable to retrieve your location.";
+                alert("Please allow access to geolocation");
+            }
+            function getRoute() {
+                if (!userLocation) {
+                    alert("User location not available yet.");
+                    return;
+                }
+                //Places library setting route
+                const place = autocomplete.getPlace();
+                if (!place || !place.geometry) {
+                    alert("Please select a valid destination from the list.");
+                    return;
+                }
+                const destination = {
+                    lat: place.geometry.location.lat(),
+                    lng: place.geometry.location.lng(),
+                };
+                calculateAndDisplayRoute(userLocation, destination);
+            }
+            function calculateAndDisplayRoute(origin, destination) {
+                directionsService.route(
+                {
+                    origin,
+                    destination,
+                    travelMode: google.maps.TravelMode.DRIVING, //Set by default, we can change it later, or make the user select what they want.
+                },
+                (response, status) => {
+                    if (status === "OK") {
+                    directionsRenderer.setDirections(response);
+                    const route = response.routes[0].legs[0];
+                    document.getElementById("time").textContent = "Time: " + route.duration.text;
+                    document.getElementById("distance").textContent = "Distance: " + route.distance.text;
+                    } else {
+                    alert("Directions request failed due to " + status);
+                    }
+                }
+                );
+            }
+    </script>
         <hr>
         <footer>
         <h1><u>Developers</u></h1>
@@ -429,11 +537,17 @@
             </div>
         </div>
 
-           <!-- Authors: <br>Jesse Alves<br>Ryan Guillen<br>Bryan Ortega<br>Tiffany Choi<br>Alexander Ribau<br>
+        <!-- Authors: <br>Jesse Alves<br>Ryan Guillen<br>Bryan Ortega<br>Tiffany Choi<br>Alexander Ribau<br>
             &copy; Copyright reserved<br>-->
         </footer>
         </div>
-    <script src = "index.js"></script>
+    </script>
+    <!--Load google maps javaScript with places library (More options for customizing the map)-->
+    <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3vmcOgWcdl2dFmpFimaeVVvMevRJodP4&libraries=places&callback=initMap">
+    </script>
     </body>
 
 </html>

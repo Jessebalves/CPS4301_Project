@@ -35,6 +35,7 @@ footer{
 #navigation_bar li {
   display: block;
   position: relative;
+  z-index: 1000;
   float: left;
   background-color:hsl(249, 80%, 30%);
   border-bottom: 1px solid white;
