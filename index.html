@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset = "UTF-8">
+    <title>KeanRoutes</title>
+    <link rel = "stylesheet" href = "style.css">
+    <!--<style>
+    #map {
+        width: 750px;
+        height: 600px;
+        border: 0;
+    }
+    .map_container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .controls {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    input {
+        width: 400px;
+        padding: 8px;
+        font-size: 16px;
+    }
+    button {
+        padding: 8px 12px;
+        margin-left: 8px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .text_container {
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+    </style>-->
+    </head>
+
+        <body>
+        <div class = "wrapper">
+            <header>
+                <br>
+                <div class = "tilte_container">
+                    <h1><b>KeanRoutes</b></h1>
+                    <img src = "KeanRoutes_Images/Kean_univ.png" id = "kean_logo">
+                </div><br>
+            
+                <!--<input type="text" id="navSearch" placeholder="Search for location here..." style="width: 40%; padding: 8px; margin: 40px auto; display: block; border-radius: 10px;">-->
+                <div class = "navigation_bar_container">
+                    <nav>
+                        <ul id="navigation_bar">
+
+                    <!-------------------------------------------BUILDINGS LIST-------------------------------------------->
+                            <li><a href="#Buildings">Buildings</a>
+                                <ul>
+
+                                    <li><a href="#">Administration Building</a>
+                                        <ul>
+                                            <li id = "raise_description_two_lines">
+                                                <a href="#">
+                                                    <p><small>Assistance in registering information, financial questions + tuition,
+                                                    registration, human resources.</small></p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li><a href="#">Admissions Office</a>
+                                        <ul>
+                                            <li id = "raise_description_two_lines">
+                                                <a href="#">
+                                                    <p><small>Help with admissions and registering information for new students 
+                                                    <!--[1000 Morris Ave Ste 1, Union, NJ 07083]</small>--></small></p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="#">Barlett Hall</a>
+                                        <ul>
+                                            <li><a href="#"><p>Dormitories[1000 Morris Ave Ste 1, Union, NJ 07083]</p></a>
+                                        </ul>
+                                        </li>
+                                
+                                    <li><a href="#">Bruce Hall</a>
+                                        <ul>
+                                            <li><a href="#"><p>Classrooms + scientific labs biology and medical.</p></a>
+                                        </ul>
+                                        </li>
+
+                                    <li><a href="#">Carole Hynes Field House</a>
+                                        <ul>
+                                            <li><a href="#"><p>Restrooms + weight room, concessions food</p></a>
+                                        </ul>
+                                        </li>
+
+                                    <li><a href="#">Center for Academic Success</a>
+                                        <ul>
+                                            <li><a href="#"><p>Classrooms mostly for history,english,writing etc.</p></a>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="#">Cougar Hall</a>
+                                        <ul>
+                                            <li><a href="#"><p>Residence dorms + Cafe,Great Room lounge, game room, business center, warming room (for food).</p></a>
+                                        </ul>                          
+                                    </li>
+
+                                    <li><a href="#">Downs Hall</a>
+                                        <ul>
+                                            <li><a href="#"><p>Meeting rooms, Health Services, Counseling Services, Campus Ministry, and Police Headquarters</p></a>
+                                        </ul>                          
+                                    </li>
+
+                        <li><a href="#">Green Lane Academic Building</a>
+                            <ul>
+                                <li><a href="#"><p>Houses classrooms, faculty offices, and a full-service bookstore</p></a>
+                            </ul>   
+                        </li>
+
+                        <li><a href="#">Harwood Arena</a>
+                            <ul>
+                                <li><a href="#"><p>Administrative offices for sports teams and three basketball courts.</p></a>
+                            </ul>                              
+                        </li>
+
+                        <li><a href="#">Hennings Hall</a>
+                            <ul>
+                                <li><a href="#"><p>Classrooms connected to the Hutchinson Hall</p></a>
+                            </ul>                             
+                        </li>
+
+                        <li><a href="#">Technology Building</a>
+                            <ul>
+                                <li><a href="#"><p>Contains classrooms, faculty offices, and a Child Care and Development Center.</p></a>
+                            </ul>                             
+                        </li>
+
+                        <li><a href="#">Wilkins Theatre for the Performing Arts</a>
+                            <ul>
+                                <li><a href="#"><p>A 956-seat theatre that hosts various performances and events.</p></a>
+                            </ul>                                
+                        </li>
+
+                        <li><a href="#">Nancy Thompson Library</a>
+                            <ul>
+                                <li><a href="#"><p>Library , Academic databases, and a Starbucks.</p></a>
+                            </ul>                              
+                        </li>
+
+                        <li><a href="#">Hynes Hall</a>
+                            <ul>
+                                <li><a href="#"><p>Meeting rooms, classrooms, presentations + areas for fairs.</p></a>
+                            </ul>    
+                        </li>
+
+                        <!--<li><a href="#">Kean Kitchen</a>
+                            <ul>
+                                <li><a href="#"><p>This is Kean's dining hall, offering a variety of fresh salads, fruits, grilled entrees, pasta, and diverse full meals.</p></a>
+                            </ul>     
+                        </li>-->
+
+                        <li><a href="#">Miron Student Center</a>
+                            <ul>
+                                <li><a href="#"><p>Food court, game room, convenience store.</p></a>
+                            </ul>   
+                        </li>
+
+                        <li><a href="#">Whiteman Hall</a>
+                            <ul>
+                                <li><a href="#"><p>Freshmen dormitories, residential mailroom.</p></a>
+                            </ul>  
+                        </li>
+
+                        <li><a href="#">Freshman Residence Hall</a>
+                            <ul>
+                                <li><a href="#"><p>Freshmen dormitories.</p></a>
+                            </ul>                             
+                        </li>
+
+                        <li><a href="#">Upperclassman Residence Hall</a>
+                            <ul>
+                                <li><a href="#"><p>Upperclassmen dormitories + Kean Kitchen - all you can eat buffet.</p></a>
+                            </ul> 
+                        </li>
+
+                        <li><a href="#">Dougall Hall</a>
+                            <ul>
+                                <li><a href="#"><p>Freshmen dormitories, Cougar Cardio Room.</p></a>
+                            </ul> 
+                        </li>
+
+                        <li><a href="#">Burch Hall</a>
+                            <ul>
+                                <li><a href="#"><p>Dormitories.</p></a>
+                            </ul> 
+                        </li>
+
+                        <li><a href="#">Rogers Hall</a>
+                            <ul>
+                                <li><a href="#"><p>Dormitories.</p></a>
+                            </ul>                            
+                        </li>
+
+                        <li><a href="#">George Hennings Hall</a>
+                            <ul>
+                                <li><a href="#"><p>Classrooms, faculty offices, computer labs.</p></a>
+                            </ul> 
+                        </li>
+
+                        <li><a href="#">Hutchinson Hall</a>
+                            <ul>
+                                <li><a href="#"><p>Department of Political, Social and Cultural Sciences,  School of Public Architecture, Robert Busch School of Design,
+                                    Television Studio, Instructional Resource Center.
+                                </p></a>
+                            </ul> 
+                        </li>
+
+                        <li><a href="#">North Avenue Academic Building</a>
+                            <ul>
+                                <li><a href="#"><p>Classrooms, faculty offices, conference/event space.</p></a>
+                            </ul> 
+                        </li>
+
+                        <li><a href="#">D'Angola Gymnasium</a>
+                            <ul>
+                                <li><a href="#"><p>University’s main fitness center that has two circuit weight training machines, free weights and over 30 pieces of cardio equipment, Pool.</p></a>
+                            </ul> 
+                        </li>
+
+                        <li><a href="#">Sozio Hall</a>
+                            <ul>
+                                <li><a href="#"><p>Dormitories.</p></a>
+                            </ul> 
+                        </li>
+
+                        <li><a href="#">STEM building</a>
+                            <ul>
+                                <li><a href="#"><p>Stem courses available.</p></a>
+                            </ul> 
+                        </li>
+
+                        <li><a href="#">Townsend Hall</a>
+                            <ul>
+                                <li><a href="#"><p>Classrooms and lockers</p></a>
+                            </ul> 
+                        </li>
+
+                        <li><a href="#">Liberty Hall</a>
+                            <ul>
+                                <li><a href="#"><p>Miscellaneous courses ie history etc.</p></a>
+                            </ul> 
+                        </li>
+
+                    </ul>
+                    </li>
+
+                    <!-------------------------------------------FOOD LIST-------------------------------------------->
+                    <li><a href="#">Food</a>
+                    <ul> 
+                        <li class = "chip"><a href="#">Chipotle</a>
+                        <ul>
+                            <li><a href="#"><p><small>Chipotle has mexican food in a build your own meal style. Burritos, Quesadillas, Bowls.</small></p></a></li>
+                        </ul>
+                        </li>
+
+                        <li><a href="#">Coldstone</a>
+                            <ul>
+                                <li><a href="#"><p><small>Coldstone has ice cream, milkshakes, smoothies, frappes, cakes, and cookies.</small></p></a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Kean Kitchen</a>
+                            <ul>
+                                <li><a href="#"><p>This is Kean's dining hall, offering a variety of fresh salads, fruits, grilled entrees, pasta, and diverse full meals.</p></a>
+                            </ul>     
+                        </li>
+                        <li><a href="#">Tropicana Diner</a>
+                            <ul>
+                                <li><a href="#"><p>545 Morris Ave Elizabeth, NJ, 07208,</p></a></li>
+                            </ul>    
+                        </li>
+                        <li><a href="#">Mark Twain Diner & Restaurant</a>
+                            <ul>
+                                <li><a href="#"><p>1601 Morris Ave, Union, NJ 07083</p></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Valença Restaurant</a>
+                            <ul>
+                                <li><a href="#"><p><small>Valencas restaurant offers Portuguese food and Spanish food.<!--665 Monroe Ave, Elizabeth, NJ 07201--></small></p></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Smash Burger</a>
+                        <ul>
+                            <li><a href="#">1000 Morris Ave, Union, NJ 07083</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">Taco Bell</a>
+                        <ul>
+                            <li><a href="#"><p><small>Mexican Fast Food. Location: 2704 US Highway 22 E., Union, NJ 07083</small></p></a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+
+                    <!-------------------------------------------EVENTS LIST-------------------------------------------->
+                    <li><a href='#'>Events</a>
+                    <!--<ul>
+                        <li><a href="#">Placeholder</a>
+                            </a>
+                            <ul>
+                                <li id = "testoo"><a href="#"><p>Sports? </p></a>
+                            </ul>                             
+                        </li>
+
+                    </ul>-->
+
+                    <!-------------------------------------------OTHER LIST-------------------------------------------->
+                    <li><a href='#'>Other</a>
+                    <ul>
+
+                        <li><a href="#">Fuel 4 Gas & Diesel</a>
+                            <ul>
+                                <li id = "testoo"><a href="#"><p>Gas station [1384 Morris Ave, Union, NJ 07083]</p></a>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Exxon</a>
+                            <ul>
+                                <li id = "testoo"><a href="#"><p>Gas station + convenience store [556 Westfield Ave, Elizabeth, NJ 07208]</p></a>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Delta</a>
+                            <ul>
+                                <li id = "testoo"><a href="#"><p>Gas station [981 Magie Ave, Union, NJ 07083]</p></a>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Shell</a>
+                            <ul>
+                                <li id = "testoo"><a href="#"><p>Gas station + Convenience store [574 Newark Ave, Elizabeth, NJ 07208]</p></a>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">EZ Quick</a>
+                            <ul>
+                                <li id = "testoo"><a href="#"><p>Gas station [381 Morris Ave, Elizabeth, NJ 07208]</p></a>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Enrite</a>
+                            <ul>
+                                <li id = "testoo"><a href="#"><p>Gas station [201 W Grand St, Elizabeth, NJ 07202]</p></a>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">7-Eleven</a>
+                            <ul>
+                                <li id = "testoo"><a href="#"><p>Pit stop for snacks and drinks. [1174 Morris Ave, Union, NJ 07083]</p></a>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">CVS</a>
+                            <ul>
+                                <li id = "testoo"><a href="#"><p>Closest pharmacy and retail store to get daily essentials and medicines for campus life. [1105A Morris Ave, Union, NJ 07083]</p></a>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Quick Shop</a>
+                            <ul>
+                                <li id = "testoo"><a href="#"><p>Small business convenience store. [492 North Ave, Union, NJ 07083]</p></a>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">7-Eleven</a>
+                            <ul>
+                                <li id = "testoo"><a href="#"><p>Pit stop for snacks and drinks. [552-572 Morris Ave, Elizabeth, NJ 07208]</p></a>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Jabes Mini Market & Deli</a>
+                            <ul>
+                                <li id = "testoo"><a href="#"><p>A neighborhood convenience store and deli. [1175 Magie Ave, Union, NJ 07083]</p></a>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">CVS</a>
+                            <ul>
+                                <li id = "testoo"><a href="#"><p>A pharmacy and retail store offering daily essentials, prescriptions, and photo services. [430 Westfield Ave, Elizabeth, NJ 07208]</p></a>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Walgreens</a>
+                            <ul>
+                                <li id = "testoo"><a href="#"><p>A pharmacy and retail store offering prescriptions, immunizations, photo services, and daily essentials. [600 Newark Ave, Elizabeth, NJ 07208]</p></a>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Shoprite</a>
+                            <ul>
+                                <li id = "testoo"><a href="#"><p>Supermarket offering snacks, bakery goods, and daily supplies. [865 W Grand St, Elizabeth, NJ 07202]</p></a>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    </nav>
+            </header>
+
+        <main>
+                <br>
+                    <div class="controls">
+                        <input id="destination-input" type="text" placeholder="Enter destination..." />
+                        <button id="route-btn">Get Route</button>
+                    </div>
+                    <div class="map_container">
+                        <div id="map"></div>
+                    </div>
+                <div class="text_container">
+                    <h3 id="testo">Longitude and Latitude</h3>
+                    <div id="output"></div>
+                    <h3 id="time">Time:</h3>
+                    <h3 id="distance">Distance:</h3>
+                    </div>
+        </main>
+
+        <script>
+            let map, directionsService, directionsRenderer, autocomplete;
+            let userLocation = null;
+            function initMap() {
+                //Generating map, route, and displaying route.
+                directionsService = new google.maps.DirectionsService();
+                directionsRenderer = new google.maps.DirectionsRenderer();
+                //Location of the map on the site
+                map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 14,
+                    center: { lat: 40.6799, lng: -74.2454 },
+                });
+                directionsRenderer.setMap(map);
+                const input = document.getElementById("destination-input");
+                autocomplete = new google.maps.places.Autocomplete(input);
+                autocomplete.bindTo("bounds", map);
+                document.getElementById("route-btn").addEventListener("click", getRoute);
+                //Trying to get user's location
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(success, error, {
+                        enableHighAccuracy: true,
+                        timeout: 6000,
+                        maximumAge: 0,
+                    });
+                } else {
+                    document.getElementById("output").textContent = "Geolocation not supported.";
+                }
+            }
+            //Setting marker on your current location
+            function success(pos) {
+                const lat = pos.coords.latitude;
+                const lng = pos.coords.longitude;
+                userLocation = { lat, lng };
+                map.setCenter(userLocation);
+                new google.maps.Marker({
+                    position: userLocation,
+                    map,
+                    title: "Your location",
+                });
+                document.getElementById("output").innerHTML = `
+                    <b>Latitude:</b> ${lat.toFixed(5)}<br>
+                    <b>Longitude:</b> ${lng.toFixed(5)}
+                    `;
+            }
+            function error() {
+                document.getElementById("output").textContent = "Unable to retrieve your location.";
+                alert("Please allow access to geolocation");
+            }
+            function getRoute() {
+                if (!userLocation) {
+                    alert("User location not available yet.");
+                    return;
+                }
+                //Places library setting route
+                const place = autocomplete.getPlace();
+                if (!place || !place.geometry) {
+                    alert("Please select a valid destination from the list.");
+                    return;
+                }
+                const destination = {
+                    lat: place.geometry.location.lat(),
+                    lng: place.geometry.location.lng(),
+                };
+                calculateAndDisplayRoute(userLocation, destination);
+            }
+            function calculateAndDisplayRoute(origin, destination) {
+                directionsService.route(
+                {
+                    origin,
+                    destination,
+                    travelMode: google.maps.TravelMode.DRIVING, //Set by default, we can change it later, or make the user select what they want.
+                },
+                (response, status) => {
+                    if (status === "OK") {
+                    directionsRenderer.setDirections(response);
+                    const route = response.routes[0].legs[0];
+                    document.getElementById("time").textContent = "Time: " + route.duration.text;
+                    document.getElementById("distance").textContent = "Distance: " + route.distance.text;
+                    } else {
+                    alert("Directions request failed due to " + status);
+                    }
+                }
+                );
+            }
+        </script>
+
+        <hr><footer>
+            <h1><u>Developers</u></h1>
+            <div class = "dev_contain">
+                <div class = "person_container">
+                    <img src = "KeanRoutes_Images/Jess.PNG" style = "border-radius: 50%; width:32%;">
+                    <p>Jesse Alves</p>
+                </div>
+
+                <div class = "person_container">
+                    <img src = "KeanRoutes_Images/Ryan.PNG" style = "border-radius: 50%; width:45%;">
+                    <p>Ryan Guillen</p>
+                </div>
+
+                <div class = "person_container">
+                    <img src = "KeanRoutes_Images/Bryan.PNG" style = "border-radius: 50%; width:52%;">
+                    <p>Bryan Ortega</p>
+                </div>
+
+                <div class = "person_container">
+                    <img src = "KeanRoutes_Images/Alex.PNG" style = "border-radius: 50%; width:48%;">
+                    <p>Alex Ribau</p>
+                </div>
+
+                <div class = "person_container">
+                    <img src = "KeanRoutes_Images/Tiff.PNG" style = "border-radius: 50%; width:45%;">
+                    <p>Tiffany Choi</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!--</script>-->
+    <!--Load google maps javaScript with places library (More options for customizing the map)-->
+    <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3vmcOgWcdl2dFmpFimaeVVvMevRJodP4&libraries=places&callback=initMap">
+    </script>
+    </body>
+</html>
