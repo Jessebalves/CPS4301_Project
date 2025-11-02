@@ -99,7 +99,7 @@ footer{
 
 #navigation_bar ul ul li a{
   color:black;
-  width:220px;
+  width:150px;
 }
 
 /*Classes associated with html elements*/
@@ -137,8 +137,44 @@ footer{
 }
 
 #testoo{
-  right:420px;
+  right:350px;
   top:10px;
+}
+
+#map {
+  width: 750px;
+  height: 600px;
+  border: 0;
+}
+
+.map_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 400px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 8px 12px;
+  margin-left: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.text_container {
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
 /*For mobile viewing styling*/
@@ -152,9 +188,20 @@ footer{
   margin-top: -50px;
 }
 
-#testoo{
-  right:320px;
-  top:10px;
-}
+  #testoo{
+    right:250px;
+    top:10px;
+  }
 
+  #raise_description_phone_screen_three_lines{
+    top:-80px;
+  }
+
+  #raise_description_two_lines{
+    top:-45px;
+  } 
+
+  #raise_description_three_lines{
+    top:-80px;
+  }
 }
