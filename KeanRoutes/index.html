@@ -4,38 +4,6 @@
     <meta charset = "UTF-8">
     <title>KeanRoutes</title>
     <link rel = "stylesheet" href = "style.css">
-    <!--<style>
-    #map {
-        width: 750px;
-        height: 600px;
-        border: 0;
-    }
-    .map_container {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-    .controls {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-    input {
-        width: 400px;
-        padding: 8px;
-        font-size: 16px;
-    }
-    button {
-        padding: 8px 12px;
-        margin-left: 8px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-    .text_container {
-        text-align: center;
-        font-family: Arial, sans-serif;
-    }
-    </style>-->
     </head>
 
         <body>
@@ -46,274 +14,312 @@
                     <h1><b>KeanRoutes</b></h1>
                     <img src = "KeanRoutes_Images/Kean_univ.png" id = "kean_logo">
                 </div><br>
-                <input type="text" id="navSearch" placeholder="Search for location here..." style="width: 40%; padding: 8px; margin: 40px auto; display: block; border-radius: 10px;">
+                <input type="text" id="navSearch" placeholder="What are you looking for..." style="width: 40%; padding: 8px; margin: 40px auto; display: block; border-radius: 10px;"><br>
                 <div class = "navigation_bar_container">
                     <nav>
                         <ul id="navigation_bar">
 
                     <!-------------------------------------------BUILDINGS LIST-------------------------------------------->
-                            <li><a href="#Buildings">Buildings</a>
+                            <li id = "highlight_nav"><a href="#Buildings">Buildings</a>
                                 <ul>
 
-                                    <li><a href="#">Administration Building</a>
+                                    <li id = "highlight_nav"><a>Administration Building</a>
                                         <ul>
                                             <li id = "raise_description_two_lines">
-                                                <a href="#">
-                                                    <p><small>Assistance in registering information, financial questions + tuition,
-                                                    registration, human resources.</small></p>
+                                                <a>
+                                                    <p><small>Administration building offers assistance with registration, financial questions + tuition.</small></p>
                                                 </a>
                                             </li>
                                         </ul>
                                     </li>
 
 
-                                    <li><a href="#">Admissions Office</a>
+                                    <li id = "highlight_nav"><a>Admissions Office</a>
                                         <ul>
                                             <li id = "raise_description_two_lines">
-                                                <a href="#">
-                                                    <p><small>Help with admissions and registering information for new students 
+                                                <a>
+                                                    <p><small>Admissions office offers help with admissions and registering information for new students.
                                                     <!--[1000 Morris Ave Ste 1, Union, NJ 07083]</small>--></small></p>
                                                 </a>
                                             </li>
                                         </ul>
                                     </li>
 
-                                    <li><a href="#">Barlett Hall</a>
+                                    <li id = "highlight_nav"><a>Barlett Hall</a>
                                         <ul>
-                                            <li><a href="#"><p>Dormitories[1000 Morris Ave Ste 1, Union, NJ 07083]</p></a>
+                                            <li>
+                                                <a>
+                                                    <small><p>Barlett Hall has dormitories.<!--[1000 Morris Ave Ste 1, Union, NJ 07083]--></p></small>
+                                                </a>
+                                            </li>
                                         </ul>
-                                        </li>
+                                    </li>
                                 
-                                    <li><a href="#">Bruce Hall</a>
+                                    <li id = "highlight_nav"><a>Bruce Hall</a>
                                         <ul>
-                                            <li><a href="#"><p>Classrooms + scientific labs biology and medical.</p></a>
-                                        </ul>
-                                        </li>
-
-                                    <li><a href="#">Carole Hynes Field House</a>
-                                        <ul>
-                                            <li><a href="#"><p>Restrooms + weight room, concessions food</p></a>
-                                        </ul>
-                                        </li>
-
-                                    <li><a href="#">Center for Academic Success</a>
-                                        <ul>
-                                            <li><a href="#"><p>Classrooms mostly for history,english,writing etc.</p></a>
+                                            <li>
+                                                <a>
+                                                    <small><p>Classrooms + scientific labs biology and medical.</p></small>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </li>
 
-                                    <li><a href="#">Cougar Hall</a>
+                                    <li id = "highlight_nav"><a>Carole Hynes Field House</a>
                                         <ul>
-                                            <li><a href="#"><p>Residence dorms + Cafe,Great Room lounge, game room, business center, warming room (for food).</p></a>
+                                            <li id = "raise_description_two_lines">
+                                                <a>
+                                                    <small><p>Restrooms + weight room, concessions food</p></small>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li id = "highlight_nav"><a>Center for Academic Success</a>
+                                        <ul>
+                                            <li id ="raise_description_three_lines">
+                                                <a>
+                                                    <small><p>Classrooms mostly for history,english,writing etc.</p></small>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li id = "highlight_nav"><a>Cougar Hall</a>
+                                        <ul>
+                                            <li>
+                                                <a>
+                                                    <small><p>Residence dorms + Cafe,Great Room lounge, game room, business center, warming room (for food).</p></small>
+                                                </a>
+                                            </li>
                                         </ul>                          
                                     </li>
 
-                                    <li><a href="#">Downs Hall</a>
+                                    <li id = "highlight_nav"><a>Downs Hall</a>
                                         <ul>
-                                            <li><a href="#"><p>Meeting rooms, Health Services, Counseling Services, Campus Ministry, and Police Headquarters</p></a>
+                                            <li>
+                                                <a>
+                                                    <small><p>Meeting rooms, Health Services, Counseling Services, Campus Ministry, and Police Headquarters</p></small>
+                                                </a>
+                                            </li>
                                         </ul>                          
                                     </li>
 
-                        <li><a href="#">Green Lane Academic Building</a>
+                        <li id = "highlight_nav"><a>Green Lane Academic Building</a>
                             <ul>
-                                <li><a href="#"><p><small>Green Lane Academic Building(GLAB) has houses classrooms, faculty offices, and a full-service bookstore/library.</p></small></a>
+                                <li id = "raise_description_three_lines">
+                                    <a>
+                                        <p><small>Green Lane Academic Building(GLAB) has houses classrooms, faculty offices, and a full-service bookstore/library.</p></small>
+                                    </a>
+                                </li>
                             </ul>   
                         </li>
 
-                        <li><a href="#">Harwood Arena</a>
+                        <li id = "highlight_nav"><a>Harwood Arena</a>
                             <ul>
-                                <li><a href="#"><p>Administrative offices for sports teams and three basketball courts.</p></a>
+                                <li><a><p>Administrative offices for sports teams and three basketball courts.</p></a>
                             </ul>                              
                         </li>
 
-                        <li><a href="#">Hennings Hall</a>
+                        <li id = "highlight_nav"><a>Hennings Hall</a>
                             <ul>
-                                <li><a href="#"><p>Classrooms connected to the Hutchinson Hall</p></a>
+                                <li><a><p>Classrooms connected to the Hutchinson Hall</p></a>
                             </ul>                             
                         </li>
 
-                        <li><a href="#">Technology Building</a>
+                        <li id = "highlight_nav"><a>Technology Building</a>
                             <ul>
-                                <li><a href="#"><p>Contains classrooms, faculty offices, and a Child Care and Development Center.</p></a>
+                                <li><a><p>Contains classrooms, faculty offices, and a Child Care and Development Center.</p></a>
                             </ul>                             
                         </li>
 
-                        <li><a href="#">Wilkins Theatre for the Performing Arts</a>
+                        <li id = "highlight_nav"><a>Wilkins Theatre for the Performing Arts</a>
                             <ul>
-                                <li><a href="#"><p>A 956-seat theatre that hosts various performances and events.</p></a>
+                                <li><a><p>A 956-seat theatre that hosts various performances and events.</p></a>
                             </ul>                                
                         </li>
 
-                        <li><a href="#">Nancy Thompson Library</a>
+                        <li id = "highlight_nav"><a>Nancy Thompson Library</a>
                             <ul>
-                                <li><a href="#"><p>Library , Academic databases, and a Starbucks.</p></a>
+                                <li><a><p>Library , Academic databases, and a Starbucks.</p></a>
                             </ul>                              
                         </li>
 
-                        <li><a href="#">Hynes Hall</a>
+                        <li id = "highlight_nav"><a>Hynes Hall</a>
                             <ul>
-                                <li><a href="#"><p>Meeting rooms, classrooms, presentations + areas for fairs.</p></a>
+                                <li><a><p>Meeting rooms, classrooms, presentations + areas for fairs.</p></a>
                             </ul>    
                         </li>
 
-                        <!--<li><a href="#">Kean Kitchen</a>
+                        <li id = "highlight_nav"><a>Miron Student Center</a>
                             <ul>
-                                <li><a href="#"><p>This is Kean's dining hall, offering a variety of fresh salads, fruits, grilled entrees, pasta, and diverse full meals.</p></a>
-                            </ul>     
-                        </li>-->
-
-                        <li><a href="#">Miron Student Center</a>
-                            <ul>
-                                <li><a href="#"><p>Food court, game room, convenience store.</p></a>
+                                <li><a><p>Food court, game room, convenience store.</p></a>
                             </ul>   
                         </li>
 
-                        <li><a href="#">Whiteman Hall</a>
+                        <li id = "highlight_nav"><a>Whiteman Hall</a>
                             <ul>
-                                <li><a href="#"><p>Freshmen dormitories, residential mailroom.</p></a>
+                                <li><a><p>Freshmen dormitories, residential mailroom.</p></a>
                             </ul>  
                         </li>
 
-                        <li><a href="#">Freshman Residence Hall</a>
+                        <li id = "highlight_nav"><a>Freshman Residence Hall</a>
                             <ul>
-                                <li><a href="#"><p>Freshmen dormitories.</p></a>
+                                <li><a><p>Freshmen dormitories.</p></a>
                             </ul>                             
                         </li>
 
-                        <li><a href="#">Upperclassman Residence Hall</a>
+                        <li id = "highlight_nav"><a>Upperclassman Residence Hall</a>
                             <ul>
-                                <li><a href="#"><p>Upperclassmen dormitories + Kean Kitchen - all you can eat buffet.</p></a>
+                                <li><a><p>Upperclassmen dormitories + Kean Kitchen - all you can eat buffet.</p></a>
                             </ul> 
                         </li>
 
-                        <li><a href="#">Dougall Hall</a>
+                        <li id = "highlight_nav"><a>Dougall Hall</a>
                             <ul>
-                                <li><a href="#"><p>Freshmen dormitories, Cougar Cardio Room.</p></a>
+                                <li><a><p>Freshmen dormitories, Cougar Cardio Room.</p></a>
                             </ul> 
                         </li>
 
-                        <li><a href="#">Burch Hall</a>
+                        <li id = "highlight_nav"><a>Burch Hall</a>
                             <ul>
-                                <li><a href="#"><p>Dormitories.</p></a>
+                                <li><a><p>Dormitories.</p></a>
                             </ul> 
                         </li>
 
-                        <li><a href="#">Rogers Hall</a>
+                        <li id = "highlight_nav"><a>Rogers Hall</a>
                             <ul>
-                                <li><a href="#"><p>Dormitories.</p></a>
+                                <li><a><p>Dormitories.</p></a>
                             </ul>                            
                         </li>
 
-                        <li><a href="#">George Hennings Hall</a>
+                        <li id = "highlight_nav"><a>George Hennings Hall</a>
                             <ul>
-                                <li><a href="#"><p>Classrooms, faculty offices, computer labs.</p></a>
+                                <li><a><p>Classrooms, faculty offices, computer labs.</p></a>
                             </ul> 
                         </li>
 
-                        <li><a href="#">Hutchinson Hall</a>
+                        <li id = "highlight_nav"><a>Hutchinson Hall</a>
                             <ul>
-                                <li><a href="#"><p>Department of Political, Social and Cultural Sciences,  School of Public Architecture, Robert Busch School of Design,
-                                    Television Studio, Instructional Resource Center.
+                                <li><a><small><p>Department of Political, Social and Cultural Sciences,  School of Public Architecture, Robert Busch School of Design,
+                                    Television Studio, Instructional Resource Center.</small>
                                 </p></a>
                             </ul> 
                         </li>
 
-                        <li><a href="#">North Avenue Academic Building</a>
+                        <li id = "highlight_nav"><a>North Avenue Academic Building</a>
                             <ul>
-                                <li><a href="#"><p>Classrooms, faculty offices, conference/event space.</p></a>
+                                <li id ="raise_description_three_lines">
+                                    <a>
+                                        <small><p>Classrooms, faculty offices, conference/event space.</p></small>
+                                    </a>
+                                </li>
                             </ul> 
                         </li>
 
-                        <li><a href="#">D'Angola Gymnasium</a>
+                        <li id = "highlight_nav"><a>D'Angola Gymnasium</a>
                             <ul>
-                                <li><a href="#"><p>University’s main fitness center that has two circuit weight training machines, free weights and over 30 pieces of cardio equipment, Pool.</p></a>
+                                <li id = "raise_description_two_lines">
+                                    <a>
+                                        <small><p>Main fitness center that has circuit weight training machines, free weights, cardio equipment, and a pool.</p></small>
+                                    </a>
+                                </li>
                             </ul> 
                         </li>
 
-                        <li><a href="#">Sozio Hall</a>
+
+                        <li id = "highlight_nav"><a>STEM building</a>
                             <ul>
-                                <li><a href="#"><p>Dormitories.</p></a>
+                                <li><a><p>Stem courses available.</p></a>
                             </ul> 
                         </li>
 
-                        <li><a href="#">STEM building</a>
+                        <li id = "highlight_nav"><a>Townsend Hall</a>
                             <ul>
-                                <li><a href="#"><p>Stem courses available.</p></a>
+                                <li><a><p>Classrooms and lockers</p></a>
                             </ul> 
                         </li>
 
-                        <li><a href="#">Townsend Hall</a>
+                        <li id = "highlight_nav"><a>Liberty Hall</a>
                             <ul>
-                                <li><a href="#"><p>Classrooms and lockers</p></a>
+                                <li><a><small><p>Miscellaneous courses ie history etc.</small></p></a>
                             </ul> 
                         </li>
 
-                        <li><a href="#">Liberty Hall</a>
+                        <li id = "highlight_nav"><a>Sozio Hall</a>
                             <ul>
-                                <li><a href="#"><p>Miscellaneous courses ie history etc.</p></a>
+                                <li style = "margin-bottom: 50px;">
+                                    <a>
+                                        <small><p>Dormitories.</p></small>
+                                    </a>
+                                </li>
                             </ul> 
                         </li>
 
                     </ul>
-                    </li>
 
                     <!-------------------------------------------FOOD LIST-------------------------------------------->
-                    <li><a href="#">Food</a>
+                    <li id = "highlight_nav"><a>Food</a>
                     <ul> 
-                        <li class = "chip"><a href="#">Chipotle</a>
+                        <li  id = "highlight_nav"><a>Chipotle</a>
                         <ul>
-                            <li><a href="#"><p><small>Chipotle has mexican food in a build your own meal style. Burritos, Quesadillas, Bowls.</small></p></a></li>
+                            <li><a><p><small>Chipotle has mexican food in a build your own meal style. Burritos, Quesadillas, Bowls.</small></p></a></li>
                         </ul>
                         </li>
 
-                        <li><a href="#">Coldstone</a>
+                        <li id = "highlight_nav"><a>Coldstone</a>
                             <ul>
-                                <li><a href="#"><p><small>Coldstone has ice cream, milkshakes, smoothies, frappes, cakes, and cookies.</small></p></a></li>
+                                <li><a><p><small>Coldstone has ice cream, milkshakes, smoothies, frappes, cakes, and cookies.</small></p></a></li>
                             </ul>
                         </li>
 
-                        <li><a href="#">Kean Kitchen</a>
+                        <li id = "highlight_nav"><a>Kean Kitchen</a>
                             <ul>
-                                <li><a href="#"><p>This is Kean's dining hall, offering a variety of fresh salads, fruits, grilled entrees, pasta, and diverse full meals.</p></a>
+                                <li><a><p>This is Kean's dining hall, offering a variety of fresh salads, fruits, grilled entrees, pasta, and diverse full meals.</p></a>
                             </ul>     
                         </li>
-                        <li><a href="#">Tropicana Diner</a>
+
+                        <li id = "highlight_nav"><a>Tropicana Diner</a>
                             <ul>
-                                <li><a href="#"><p>545 Morris Ave Elizabeth, NJ, 07208,</p></a></li>
+                                <li><a><p>545 Morris Ave Elizabeth, NJ, 07208,</p></a></li>
                             </ul>    
                         </li>
-                        <li><a href="#">Mark Twain Diner & Restaurant</a>
+
+                        <li id = "highlight_nav"><a>Mark Twain Diner & Restaurant</a>
                             <ul>
-                                <li><a href="#"><p>1601 Morris Ave, Union, NJ 07083</p></a></li>
+                                <li><a><p>1601 Morris Ave, Union, NJ 07083</p></a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Valença Restaurant</a>
+
+                        <li id = "highlight_nav"><a>Valença Restaurant</a>
                             <ul>
-                                <li><a href="#"><p><small>Valencas restaurant offers Portuguese food and Spanish food.<!--665 Monroe Ave, Elizabeth, NJ 07201--></small></p></a></li>
+                                <li><a><p><small>Valencas restaurant offers Portuguese food and Spanish food.<!--665 Monroe Ave, Elizabeth, NJ 07201--></small></p></a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Smash Burger</a>
+                        
+                        <li id = "highlight_nav"><a>Smash Burger</a>
                         <ul>
-                            <li><a href="#">1000 Morris Ave, Union, NJ 07083</a></li>
+                            <li><a>1000 Morris Ave, Union, NJ 07083</a></li>
                         </ul>
                         </li>
-                        <li><a href="#">Taco Bell</a>
+
+                        <li id = "highlight_nav"><a>Taco Bell</a>
                         <ul>
-                            <li><a href="#"><p><small>Mexican Fast Food. Location: 2704 US Highway 22 E., Union, NJ 07083</small></p></a></li>
+                            <li><a><p><small>Mexican Fast Food. Location: 2704 US Highway 22 E., Union, NJ 07083</small></p></a></li>
                         </ul>
                         </li>
                     </ul>
                     </li>
 
                     <!-------------------------------------------EVENTS LIST-------------------------------------------->
-                    <li><a href='#'>Events</a>
+                    <li id = "highlight_nav"><a href='#'>Events</a>
                         <ul>
 
                             <!-------November 6th, 2025------->
-                            <li><a href="#">Cougars Pantrys Sorting Squad</a>
+                            <li id = "highlight_nav"><a>Cougars Pantrys Sorting Squad</a>
                                 <ul>
                                     <li class="display_desc_left_side" id = "raise_description_two_lines">
-                                        <a href="#">
+                                        <a>
                                             <small><p>November 6,2025. 10:00AM. MSC 219</p>
                                             <p>pop-up shop event that needs students to help organize and sort items.</p></small>
                                         
@@ -322,10 +328,10 @@
                                 </ul>                             
                             </li>
 
-                            <li><a href="#">Intership Chapter After</a>
+                            <li id = "highlight_nav"><a>Intership Chapter After</a>
                                 <ul>
                                     <li class = "display_desc_left_side" id = "raise_description_two_lines">
-                                        <a href="#">
+                                        <a>
                                             <small><p>November 6,2025. 6:00PM - 7:00PM. MSC 228</p>
                                             <p>pop-up shop event that needs students to help organize and sort items for the shop</p></small>
                                         
@@ -335,21 +341,21 @@
                             </li>
 
                             <!-------November 11, 2025------->
-                            <li><a href="#">United Airlines Intership Information Session</a>
+                            <li id = "highlight_nav"><a>United Airlines Intership Session</a>
                                 <ul>
                                     <li class = "display_desc_left_side" id="raise_description_three_lines">
-                                        <a href="#">
+                                        <a>
                                             <small><p>November 11,2025. 11:30AM - 12:00PM. Held online.</p>
-                                            <p>Hosted United Airlines & Office of Career Services</p></small>
+                                            <p>Hosted by United Airlines & Office of Career Services</p></small>
                                         </a>
                                     </li>
                                 </ul>                             
                             </li>
 
-                            <li><a href="#">WiCyS Jeopardy Challenge</a>
+                            <li id = "highlight_nav"><a>WiCyS Jeopardy Challenge</a>
                                 <ul>
                                     <li class="display_desc_left_side" id = "raise_description_two_lines">
-                                        <a href="#">
+                                        <a>
                                             <small><p>November 11,2025. 3:30PM. Held in Green Lane Academic Building 208(GLAB).</p>
                                             <p>Hosted by Women in Cybersecurity.</p></small>
                                         </a>
@@ -359,10 +365,10 @@
 
 
                             <!-------November 19, 2025------->
-                            <li><a href="#">Cybercrime Virtual Lecture</a>
+                            <li id = "highlight_nav"><a>Cybercrime Virtual Lecture</a>
                                 <ul>
                                     <li class="display_desc_left_side" id = "raise_description_two_lines">
-                                        <a href="#">
+                                        <a>
                                             <small><p>November 19,2025. 12:30PM. Held virutally.</p></small>
                                         </a>
                                     </li>
@@ -372,90 +378,90 @@
                         </ul>
 
                     <!-------------------------------------------OTHER LIST-------------------------------------------->
-                    <li><a href='#'>Other</a>
+                    <li id = "highlight_nav"><a href='#'>Other</a>
                     <ul>
 
-                        <li><a href="#">Fuel 4 Gas & Diesel</a>
+                        <li id = "highlight_nav"><a>Fuel 4 Gas & Diesel</a>
                             <ul>
-                                <li class="display_desc_left_side"><a href="#"><p>Gas station [1384 Morris Ave, Union, NJ 07083]</p></a>
+                                <li class="display_desc_left_side"><a><p>Gas station [1384 Morris Ave, Union, NJ 07083]</p></a>
                             </ul>
                         </li>
 
-                        <li><a href="#">Exxon</a>
+                        <li id = "highlight_nav"><a>Exxon</a>
                             <ul>
-                                <li class="display_desc_left_side"><a href="#"><p>Gas station + convenience store [556 Westfield Ave, Elizabeth, NJ 07208]</p></a>
+                                <li class="display_desc_left_side"><a><p>Gas station + convenience store [556 Westfield Ave, Elizabeth, NJ 07208]</p></a>
                             </ul>
                         </li>
 
-                        <li><a href="#">Delta</a>
+                        <li id = "highlight_nav"><a>Delta</a>
                             <ul>
-                                <li class="display_desc_left_side"><a href="#"><p>Gas station [981 Magie Ave, Union, NJ 07083]</p></a>
+                                <li class="display_desc_left_side"><a><p>Gas station [981 Magie Ave, Union, NJ 07083]</p></a>
                             </ul>
                         </li>
 
-                        <li><a href="#">Shell</a>
+                        <li id = "highlight_nav"><a>Shell</a>
                             <ul>
-                                <li class="display_desc_left_side"><a href="#"><p>Gas station + Convenience store [574 Newark Ave, Elizabeth, NJ 07208]</p></a>
+                                <li class="display_desc_left_side"><a><p>Gas station + Convenience store [574 Newark Ave, Elizabeth, NJ 07208]</p></a>
                             </ul>
                         </li>
 
-                        <li><a href="#">EZ Quick</a>
+                        <li id = "highlight_nav"><a>EZ Quick</a>
                             <ul>
-                                <li class="display_desc_left_side"><a href="#"><p>Gas station [381 Morris Ave, Elizabeth, NJ 07208]</p></a>
+                                <li class="display_desc_left_side"><a><p>Gas station [381 Morris Ave, Elizabeth, NJ 07208]</p></a>
                             </ul>
                         </li>
 
-                        <li><a href="#">Enrite</a>
+                        <li id = "highlight_nav"><a>Enrite</a>
                             <ul>
-                                <li class="display_desc_left_side"><a href="#"><p>Gas station [201 W Grand St, Elizabeth, NJ 07202]</p></a>
+                                <li class="display_desc_left_side"><a><p>Gas station [201 W Grand St, Elizabeth, NJ 07202]</p></a>
                             </ul>
                         </li>
 
-                        <li><a href="#">7-Eleven</a>
+                        <li id = "highlight_nav"><a>7-Eleven</a>
                             <ul>
-                                <li class="display_desc_left_side"><a href="#"><p>Pit stop for snacks and drinks. [1174 Morris Ave, Union, NJ 07083]</p></a>
+                                <li class="display_desc_left_side"><a><p>Pit stop for snacks and drinks. [1174 Morris Ave, Union, NJ 07083]</p></a>
                             </ul>
                         </li>
 
-                        <li><a href="#">CVS</a>
+                        <li id = "highlight_nav"><a>CVS</a>
                             <ul>
-                                <li class="display_desc_left_side"><a href="#"><p>Closest pharmacy and retail store to get daily essentials and medicines for campus life. [1105A Morris Ave, Union, NJ 07083]</p></a>
+                                <li class="display_desc_left_side"><a><p>Closest pharmacy and retail store to get daily essentials and medicines for campus life. [1105A Morris Ave, Union, NJ 07083]</p></a>
                             </ul>
                         </li>
 
-                        <li><a href="#">Quick Shop</a>
+                        <li id = "highlight_nav"><a>Quick Shop</a>
                             <ul>
-                                <li class="display_desc_left_side"><a href="#"><p>Small business convenience store. [492 North Ave, Union, NJ 07083]</p></a>
+                                <li class="display_desc_left_side"><a><p>Small business convenience store. [492 North Ave, Union, NJ 07083]</p></a>
                             </ul>
                         </li>
 
-                        <li><a href="#">7-Eleven</a>
+                        <li id = "highlight_nav"><a>7-Eleven</a>
                             <ul>
-                                <li class="display_desc_left_side"><a href="#"><p>Pit stop for snacks and drinks. [552-572 Morris Ave, Elizabeth, NJ 07208]</p></a>
+                                <li class="display_desc_left_side"><a><p>Pit stop for snacks and drinks. [552-572 Morris Ave, Elizabeth, NJ 07208]</p></a>
                             </ul>
                         </li>
 
-                        <li><a href="#">Jabes Mini Market & Deli</a>
+                        <li id = "highlight_nav"><a>Jabes Mini Market & Deli</a>
                             <ul>
-                                <li class="display_desc_left_side"><a href="#"><p>A neighborhood convenience store and deli. [1175 Magie Ave, Union, NJ 07083]</p></a>
+                                <li class="display_desc_left_side"><a><p>A neighborhood convenience store and deli. [1175 Magie Ave, Union, NJ 07083]</p></a>
                             </ul>
                         </li>
 
-                        <li><a href="#">CVS</a>
+                        <li id = "highlight_nav"><a>CVS</a>
                             <ul>
-                                <li class="display_desc_left_side"><a href="#"><p>A pharmacy and retail store offering daily essentials, prescriptions, and photo services. [430 Westfield Ave, Elizabeth, NJ 07208]</p></a>
+                                <li class="display_desc_left_side"><a><p>A pharmacy and retail store offering daily essentials, prescriptions, and photo services. [430 Westfield Ave, Elizabeth, NJ 07208]</p></a>
                             </ul>
                         </li>
 
-                        <li><a href="#">Walgreens</a>
+                        <li id = "highlight_nav"><a>Walgreens</a>
                             <ul>
-                                <li class="display_desc_left_side"><a href="#"><p>A pharmacy and retail store offering prescriptions, immunizations, photo services, and daily essentials. [600 Newark Ave, Elizabeth, NJ 07208]</p></a>
+                                <li class="display_desc_left_side"><a><p>A pharmacy and retail store offering prescriptions, immunizations, photo services, and daily essentials. [600 Newark Ave, Elizabeth, NJ 07208]</p></a>
                             </ul>
                         </li>
 
-                        <li><a href="#">Shoprite</a>
+                        <li id = "highlight_nav"><a>Shoprite</a>
                             <ul>
-                                <li class="display_desc_left_side"><a href="#"><p>Supermarket offering snacks, bakery goods, and daily supplies. [865 W Grand St, Elizabeth, NJ 07202]</p></a>
+                                <li class="display_desc_left_side"><a><p>Supermarket offering snacks, bakery goods, and daily supplies. [865 W Grand St, Elizabeth, NJ 07202]</p></a>
                             </ul>
                         </li>
 
@@ -465,7 +471,7 @@
             </header>
 
         <main>
-                <br>
+                <br><br><br>
                     <div class="controls">
                         <input id="destination-input" type="text" placeholder="Enter destination..." />
                         <button id="route-btn">Get Route</button>
@@ -587,7 +593,7 @@
 
                 <div class = "person_container">
                     <img src = "KeanRoutes_Images/Alex.PNG" style = "border-radius: 50%; width:48%;">
-                    <p>Alex Ribau</p>
+                    <p>Alexander Ribau</p>
                 </div>
 
                 <div class = "person_container">
@@ -598,12 +604,12 @@
         </footer>
     </div>
 
-    <!--</script>-->
     <!--Load google maps javaScript with places library (More options for customizing the map)-->
     <script
     async
     defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3vmcOgWcdl2dFmpFimaeVVvMevRJodP4&libraries=places&callback=initMap">
     </script>
+    <script src = "index.js"></script>
     </body>
 </html>

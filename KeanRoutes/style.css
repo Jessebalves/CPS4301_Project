@@ -63,17 +63,22 @@ footer{
 }
 
 
-#navigation_bar li:hover, li:active, li.click{
-  background-color:hsl(0, 49%, 42%);
+/*#navigation_bar li:hover, li:active, li.click{
+  background-color:hsl(216, 52%, 68%);
+}*/
+
+#highlight_nav:hover{
+  background-color:hsl(216, 52%, 68%);
 }
 
-#navigation_bar li:hover ul, li:active ul {
+
+#navigation_bar li:hover ul{
   display: block;
 }
 
 
 /*Side bar description box*/
-#navigation_bar li li:hover ul, li li:active ul{
+#navigation_bar li li:hover ul,li li:active ul, li li:focus ul{
   display: block;
   margin-left: 200px;
   margin-top: -50px;
@@ -92,8 +97,9 @@ footer{
   font-size: larger;
 }
 
-#navigation_bar ul ul li:hover, ul ul li:active{
+#navigation_bar ul ul li:active{
   display:none;
+  background-color: white;
 }
 
 
@@ -138,7 +144,7 @@ footer{
 
 .display_desc_left_side{
   right:350px;
-  top:5px;
+  top:0px;
 }
 
 #map {
@@ -202,6 +208,6 @@ button {
   } 
 
   #raise_description_three_lines{
-    top:-80px;
+    top:-95px;
   }
 }
