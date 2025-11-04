@@ -2,6 +2,7 @@
 <html>
     <head>
     <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale =0.45">
     <title>KeanRoutes</title>
     <link rel = "stylesheet" href = "style.css">
     </head>
@@ -22,11 +23,12 @@
                     <!-------------------------------------------BUILDINGS LIST-------------------------------------------->
                             <li id = "highlight_nav"><a href="#Buildings">Buildings</a>
                                 <ul id = "cmon">
-                                    <li id = "highlight_nav" class = "testing"><a>Administration Building</a>
+                                    <li id = "highlight_nav" class = "testing"><a id = "admino">Administration Building</a>
                                         <ul>
                                             <li id = "raise_description_two_lines">
                                                 <a>
-                                                    <p><small>Administration building offers assistance with registration, financial questions + tuition.</small></p>
+                                                    <p><small>offers assistance with registration, financial questions + tuition.</small></p>
+                                                    <p style = "display:none;">Administration building </p>
                                                 </a>
                                             </li>
                                         </ul>
@@ -36,9 +38,10 @@
                                     <li id = "highlight_nav" class = "testing"><a>Admissions Office</a>
                                         <ul>
                                             <li id = "raise_description_two_lines">
-                                                <a>
-                                                    <p><small>Admissions office offers help with admissions and registering information for new students.
+                                                <a class = "admino">
+                                                    <p><small>Offers help with admissions and registering information.
                                                     <!--[1000 Morris Ave Ste 1, Union, NJ 07083]</small>--></small></p>
+                                                    <p style = "display:none;">Admissions office </p>
                                                 </a>
                                             </li>
                                         </ul>
@@ -275,7 +278,7 @@
 
                         <li id = "highlight_nav" class = "testing"><a>Coldstone</a>
                             <ul>
-                                <li><a><p><small>has ice cream, milkshakes, smoothies, frappes, cakes, and cookies.</small></p> <p style = "display:none">Coldstone Motherducker</p></a></li>
+                                <li><a><p><small>Has ice cream, milkshakes, smoothies, frappes, cakes, and cookies.</small></p> <p style = "display:none">Coldstone Motherducker</p></a></li>
                             </ul>
                         </li>
 
@@ -287,7 +290,9 @@
 
                         <li id = "highlight_nav" class = "testing"><a>Tropicana Diner</a>
                             <ul>
-                                <li><a><p>545 Morris Ave Elizabeth, NJ, 07208,</p></a></li>
+                                <li><a><p>545 Morris Ave Elizabeth, NJ, 07208,</p>
+                                    <p style = "display:none">Tropicana Diner, Lunch, Brucnh, Breakfast, Dinner</p>
+                                </a></li>
                             </ul>    
                         </li>
 
@@ -347,12 +352,12 @@
                             </li>
 
                             <!-------November 11, 2025------->
-                            <li id = "highlight_nav" class = "testing"><a>United Airlines Intership Session</a>
+                            <li id = "highlight_nav" class = "testing"><a>United Airlines Internship</a>
                                 <ul>
                                     <li class = "display_desc_left_side" id="raise_description_three_lines">
                                         <a>
                                             <small><p>November 11,2025. 11:30AM - 12:00PM. Held online.</p>
-                                            <p>Hosted by United Airlines & Office of Career Services</p></small>
+                                            <p style = "display:none;">United Airlines Internship session. Hosted by United Airlines & Office of Career Services</p></small>
                                         </a>
                                     </li>
                                 </ul>                             
@@ -363,7 +368,8 @@
                                     <li class="display_desc_left_side" id = "raise_description_two_lines">
                                         <a>
                                             <small><p>November 11,2025. 3:30PM. Held in Green Lane Academic Building 208(GLAB).</p>
-                                            <p>Hosted by Women in Cybersecurity.</p></small>
+                                            </small>
+                                            <p style = "display:none;">Hosted by Women in Cybersecurity, Wicys</p>
                                         </a>
                                     </li>
                                 </ul>                             
@@ -585,7 +591,7 @@
             <h1>Developers</h1><br>
             <div class = "dev_contain">
                 <div class = "person_container">
-                    <img src = "KeanRoutes_Images/Jess.PNG" style = "border-radius: 50%; width:32%;">
+                    <img src = "KeanRoutes_Images/Jesse.PNG" style = "border-radius: 50%; width:51%;">
                     <p>Jesse Alves</p>
                 </div>
 
