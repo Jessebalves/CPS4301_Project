@@ -1,5 +1,5 @@
 //document.getElementById("testo").textContent = "This is the main section of the body";
-
+/*
 if (!navigator.geolocation) {
     throw new Error("No geolocation available");
     }
@@ -27,3 +27,57 @@ if (!navigator.geolocation) {
         };
 
         navigator.geolocation.watchPosition(success, error, options);
+
+
+*/
+
+
+document.getElementById("navSearch").addEventListener("keyup", function() {
+  const filter = this.value.toLowerCase().trim();
+  const nav = document.getElementById("navigation_bar");
+  const li = nav.getElementsByTagName("li");
+  const cmon = document.getElementById("cmon");
+  console.log(cmon);
+
+
+  for (let i = 0; i < li.length; i++) {
+      const text = li[i].textContent || links[i].innerText;
+      const parentLi = li[i].closest("li"); 
+
+      if (text.toLowerCase().includes(filter)) {
+      parentLi.style.display = "";
+      cmon.style.overflow="visible";
+      } 
+      
+      else {
+      parentLi.style.display = "none";
+      }
+  }
+  if(filter==""){
+    for(let i = 0; i < li.length;i++){
+      cmon.style.overflow="scroll";
+    }
+  }
+});
+
+
+
+
+
+
+document.getElementById("buildingSearch").addEventListener("keyup", function() {
+  //const buildingList = document.getElementById("buildings_list");
+  //const filter = this.value.toLowerCase().trim();
+  //const buildingList = document.getElementById("buildings_list");
+  //const topLevelItems = buildingList.querySelectorAll(":scope > li"); 
+
+  topLevelItems.forEach(li => {
+    //const textContent = li.textContent.toLowerCase(); 
+    if (textContent.includes(filter)) {
+      li.style.display = ""; 
+    } else {
+      li.style.display = "none"; 
+    }
+  });
+});
+

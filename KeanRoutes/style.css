@@ -3,7 +3,7 @@ body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:hsl(260, 16%, 96%);
+    background-color:hsl(280, 14%, 96%);
 }
 
 header{
@@ -17,7 +17,8 @@ header{
 footer{
     text-align: center;
     color: black;
-    background-color: hsl(260, 16%, 96%);
+    background-color: hsl(249, 80%, 30%);
+    color:white;
     overflow: auto;
 }
 
@@ -79,6 +80,7 @@ footer{
 
 /*Side bar description box*/
 #navigation_bar li li:hover ul,li li:active ul, li li:focus ul{
+  position:relative;
   display: block;
   margin-left: 200px;
   margin-top: -50px;
@@ -97,8 +99,9 @@ footer{
   font-size: larger;
 }
 
-#navigation_bar ul ul li:active{
-  display:none;
+/*Changed this 11/2*/
+#navigation_bar ul ul li:hover,ul ul li:active, ul ul li:focus{
+  display:block;
   background-color: white;
 }
 
@@ -183,6 +186,25 @@ button {
   font-family: Arial, sans-serif;
 }
 
+#cmon{
+   overflow-y: scroll;
+   direction:ltr;
+   max-height: 370%;
+   width:365px;
+}
+
+#testing{
+   overflow-y: scroll;
+   direction:ltr;
+   width:365px;
+}
+
+.testing{
+   max-height: 50px;
+   width:200px;
+}
+
+
 /*For mobile viewing styling*/
 @media screen and (max-width:870px){
   #navigation_bar li a {
@@ -195,8 +217,25 @@ button {
 }
 
   .display_desc_left_side{
-    right:250px;
+    right:350px;
     top:0px;
+  }
+
+  #cmon{
+   overflow-y: scroll;
+   direction:ltr;
+   max-height: 370%;
+   width:200px;
+  }
+
+  #testing{
+   overflow-y: scroll;
+   direction:ltr;
+   max-height: 350%;
+}
+  .testing{
+    max-height:50px;
+    width: 100px;
   }
 
   #raise_description_phone_screen_three_lines{
@@ -210,4 +249,5 @@ button {
   #raise_description_three_lines{
     top:-95px;
   }
+
 }
