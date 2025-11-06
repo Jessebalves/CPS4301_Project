@@ -19,7 +19,8 @@ footer{
     color: black;
     background-color: hsl(249, 80%, 30%);
     color:white;
-    overflow: auto;
+    min-height: 500px;
+    overflow:hidden;
 }
 
 /*Ids associated with html elements*/
@@ -53,9 +54,10 @@ footer{
   padding: 0;
   text-decoration: none;
   width: 200px;
-  line-height: 400%;
+  line-height: 450%;
   color: #ffffff;
   float: none;
+  text-align: center;
 }
 
 
@@ -82,7 +84,7 @@ footer{
 #navigation_bar li li:hover ul,li li:active ul, li li:focus ul{
   position:relative;
   display: block;
-  margin-left: 200px;
+  margin-left: 220px;
   margin-top: -50px;
 }
 
@@ -137,6 +139,7 @@ footer{
 
 .dev_contain{
   display: inline-flex;
+  gap:10px;
 }
 
 .text_container{
@@ -146,8 +149,9 @@ footer{
 }
 
 .display_desc_left_side{
-  right:350px;
+  right:370px;
   top:0px;
+  /*margin-left:2000px;*/
 }
 
 #map {
@@ -186,12 +190,23 @@ button {
   font-family: Arial, sans-serif;
 }
 
-#cmon{
+#Events_scrollin{
+   overflow-x:hidden;
+   overflow-y: scroll;
+   direction:ltr;
+   max-height: 370%;
+   width:215px;
+}
+
+#cmon1{
+   overflow-x:hidden;
    overflow-y: scroll;
    direction:ltr;
    max-height: 370%;
    width:365px;
 }
+
+
 
 #testing{
    overflow-y: scroll;
@@ -210,32 +225,27 @@ button {
   #navigation_bar li a {
     width: 100px;
   }
+  #navigation_bar li{
+    width:100px;
+  }
+  
+
   #navigation_bar li li:hover ul, li li:active ul{
   display: block;
   margin-left: 100px;
-  margin-top: -50px;
+  margin-top: -60px;
+  
+}
+
+#navigation_bar ul ul li a{
+  color:black;
+  width:100px;
+
 }
 
   .display_desc_left_side{
-    right:350px;
-    top:0px;
-  }
-
-  #cmon{
-   overflow-y: scroll;
-   direction:ltr;
-   max-height: 370%;
-   width:200px;
-  }
-
-  #testing{
-   overflow-y: scroll;
-   direction:ltr;
-   max-height: 350%;
-}
-  .testing{
-    max-height:50px;
-    width: 100px;
+    right:200px;
+    top:6px;
   }
 
   #raise_description_phone_screen_three_lines{
@@ -250,4 +260,10 @@ button {
     top:-95px;
   }
 
+   #Events_scrollin{
+    width:115px;
+    overflow-x:hidden;
+    max-height: 400%;
+  }
+  
 }

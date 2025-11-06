@@ -2,8 +2,11 @@ document.getElementById("navSearch").addEventListener("keyup", function() {
   const filter = this.value.toLowerCase().trim();
   const nav = document.getElementById("navigation_bar");
   const li = nav.getElementsByTagName("li");
-  const cmon = document.getElementById("cmon");
-  console.log(cmon);
+  const Events_scroll = document.getElementById("Events_scrollin");
+  console.log(filter);
+  console.log(nav);
+  console.log(li);
+  console.log(Events_scroll);
 
 
   for (let i = 0; i < li.length; i++) {
@@ -12,7 +15,7 @@ document.getElementById("navSearch").addEventListener("keyup", function() {
 
       if (text.toLowerCase().includes(filter)) {
       parentLi.style.display = "";
-      cmon.style.overflow="visible";
+      Events_scroll.style.overflow="visible";
       } 
       
       else {
@@ -21,7 +24,8 @@ document.getElementById("navSearch").addEventListener("keyup", function() {
   }
   if(filter==""){
     for(let i = 0; i < li.length;i++){
-      cmon.style.overflow="scroll";
+      Events_scroll.style.overflow="scroll";
+      Events_scroll.style.overflowX= "hidden";
     }
   }
 });
