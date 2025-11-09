@@ -2,11 +2,14 @@ document.getElementById("navSearch").addEventListener("keyup", function() {
   const filter = this.value.toLowerCase().trim();
   const nav = document.getElementById("navigation_bar");
   const li = nav.getElementsByTagName("li");
+  const Building_scroll = document.getElementById("Academic_Building_scrollin");
+  const Food_scroll = document.getElementById("Food_scrollin");
   const Events_scroll = document.getElementById("Events_scrollin");
+  const Other_scroll = document.getElementById("Other_scrollin");
   console.log(filter);
   console.log(nav);
   console.log(li);
-  console.log(Events_scroll);
+ 
 
 
   for (let i = 0; i < li.length; i++) {
@@ -15,7 +18,10 @@ document.getElementById("navSearch").addEventListener("keyup", function() {
 
       if (text.toLowerCase().includes(filter)) {
       parentLi.style.display = "";
-      Events_scroll.style.overflow="visible";
+      Building_scroll.style.overflow="visible";
+      Food_scroll.style.overflow = "visible";
+      Events_scroll.style.overflow = "visible";
+      Other_scroll.style.overflow = "visible";
       } 
       
       else {
@@ -24,8 +30,14 @@ document.getElementById("navSearch").addEventListener("keyup", function() {
   }
   if(filter==""){
     for(let i = 0; i < li.length;i++){
-      Events_scroll.style.overflow="scroll";
-      Events_scroll.style.overflowX= "hidden";
+      Building_scroll.style.overflow="scroll";
+      Building_scroll.style.overflowX= "hidden";
+      Food_scroll.style.overflow = "scroll";
+      Food_scroll.style.overflowX = "hidden";
+      Events_scroll.style.overflow = "scroll";
+      Events_scroll.style.overflowX = "hidden";
+      Other_scroll.style.overflow = "scroll";
+      Other_scroll.style.overflowX = "hidden";
     }
   }
 });

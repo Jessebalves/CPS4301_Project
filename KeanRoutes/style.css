@@ -190,7 +190,31 @@ button {
   font-family: Arial, sans-serif;
 }
 
+#Academic_Building_scrollin{
+   overflow-x:hidden;
+   overflow-y: scroll;
+   direction:ltr;
+   max-height: 370%;
+   width:215px;
+}
+
+#Food_scrollin{
+   overflow-x:hidden;
+   overflow-y: scroll;
+   direction:ltr;
+   max-height: 370%;
+   width:215px;
+}
+
 #Events_scrollin{
+   overflow-x:hidden;
+   overflow-y: scroll;
+   direction:ltr;
+   max-height: 370%;
+   width:215px;
+}
+
+#Other_scrollin{
    overflow-x:hidden;
    overflow-y: scroll;
    direction:ltr;
@@ -260,10 +284,27 @@ button {
     top:-95px;
   }
 
-   #Events_scrollin{
+   #Academic_Building_scrollin{
+    width:115px;
+    overflow-x:hidden;
+    max-height: 400%;
+  }
+
+  #Food_scrollin{
     width:115px;
     overflow-x:hidden;
     max-height: 400%;
   }
   
+  #Events_scrollin{
+    width:115px;
+    overflow-x:hidden;
+    max-height: 400%;
+  }
+
+  #Other_scrollin{
+    width:115px;
+    overflow-x:hidden;
+    max-height: 400%;
+  }
 }
