@@ -756,7 +756,7 @@
                                         </ul>
                                     </li>
 
-                                      <li id = "highlight_nav" class = "testing"><a>East Campus Parking Lot</a>
+                                    <li id = "highlight_nav" class = "testing"><a>East Campus Parking Lot</a>
                                         <ul>
                                             <li>
                                                 <a>
@@ -1043,128 +1043,16 @@
                     </div>
                     <br>
         </main>
-
-        <script>
-            let map, directionsService, directionsRenderer, autocomplete;
-            let userLocation = null;
-            function initMap() {
-                //Generating map, route, and displaying route.
-                directionsService = new google.maps.DirectionsService();
-                directionsRenderer = new google.maps.DirectionsRenderer();
-                //Location of the map on the site
-                map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 14,
-                    center: { lat: 40.6799, lng: -74.2454 },
-                });
-                directionsRenderer.setMap(map);
-                const input = document.getElementById("destination-input");
-                autocomplete = new google.maps.places.Autocomplete(input);
-                autocomplete.bindTo("bounds", map);
-                document.getElementById("route-btn").addEventListener("click", getRoute);
-                //Trying to get user's location
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(success, error, {
-                        enableHighAccuracy: true,
-                        timeout: 6000,
-                        maximumAge: 0,
-                    });
-                } else {
-                    document.getElementById("output").textContent = "Geolocation not supported.";
-                }
-            }
-            //Setting marker on your current location
-            function success(pos) {
-                const lat = pos.coords.latitude;
-                const lng = pos.coords.longitude;
-                userLocation = { lat, lng };
-                map.setCenter(userLocation);
-                new google.maps.Marker({
-                    position: userLocation,
-                    map,
-                    title: "Your location",
-                });
-                document.getElementById("output").innerHTML = `
-                    <b>Latitude:</b> ${lat.toFixed(5)}<br>
-                    <b>Longitude:</b> ${lng.toFixed(5)}
-                    `;
-            }
-            function error() {
-                document.getElementById("output").textContent = "Unable to retrieve your location.";
-                alert("Please allow access to geolocation");
-            }
-            function getRoute() {
-                if (!userLocation) {
-                    alert("User location not available yet.");
-                    return;
-                }
-                //Places library setting route
-                const place = autocomplete.getPlace();
-                if (!place || !place.geometry) {
-                    alert("Please select a valid destination from the list.");
-                    return;
-                }
-                const destination = {
-                    lat: place.geometry.location.lat(),
-                    lng: place.geometry.location.lng(),
-                };
-                calculateAndDisplayRoute(userLocation, destination);
-            }
-            function calculateAndDisplayRoute(origin, destination) {
-                directionsService.route(
-                {
-                    origin,
-                    destination,
-                    travelMode: google.maps.TravelMode.DRIVING, //Set by default, we can change it later, or make the user select what they want.
-                },
-                (response, status) => {
-                    if (status === "OK") {
-                    directionsRenderer.setDirections(response);
-                    const route = response.routes[0].legs[0];
-                    document.getElementById("time").textContent = "Time: " + route.duration.text;
-                    document.getElementById("distance").textContent = "Distance: " + route.distance.text;
-                    } else {
-                    alert("Directions request failed due to " + status);
-                    }
-                }
-                );
-            }
-        </script>
-
+        <!--Map-->
+        <script src="js/locations.js"></script>
+        <script src="js/map.js"></script>
         <br>
         <footer>
             <h2>Developers</h2><br>
-            <div class = "dev_contain">
-                <div class = "person_container">
-                    <img src = "KeanRoutes_Images/Jesse.PNG" style = "border-radius: 50%; width:51%; border:3px solid white">
-                    <p>Jesse Alves</p>
-                    <p><i>Team Lead/Developer</i></p>
-                </div>
-
-                <div class = "person_container">
-                    <img src = "KeanRoutes_Images/Ryan.PNG" style = "border-radius: 50%; width:45%;border:3px solid white">
-                    <p>Ryan Guillen</p>
-                    <p><i>UI Designer/Developer</i></p>
-                </div>
-
-                <div class = "person_container">
-                    <img src = "KeanRoutes_Images/Bryan.PNG" style = "border-radius: 50%; width:52%;border:3px solid white">
-                    <p>Bryan Ortega</p>
-                    <p><i>Lead GPS Developer</i></p>
-                </div>
-
-                <div class = "person_container">
-                    <img src = "KeanRoutes_Images/Alex.PNG" style = "border-radius: 50%; width:48%;border:3px solid white">
-                    <p>Alexander Ribau</p>
-                    <p><i>Designer/Developer</i></p>
-                </div>
-
-                <div class = "person_container">
-                    <img src = "KeanRoutes_Images/Tiff.PNG" style = "border-radius: 50%; width:45%;border:3px solid white">
-                    <p>Tiffany Choi</p>
-                    <p><i>Designer/Developer</i></p>
-                </div>
-            </div>
+            <!--team members-->
+                <div class="dev_contain" id="teamContainer"></div>
         </footer>
+        <script src="js/teamMember.js"></script>
     </div>
 
     <!--Load google maps javaScript with places library (More options for customizing the map)-->
@@ -1173,7 +1061,7 @@
     defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3vmcOgWcdl2dFmpFimaeVVvMevRJodP4&libraries=places&callback=initMap">
     </script>
-    <script src = "index.js"></script>
+    <script src = "js/index.js"></script>
     </body>
 
 </html>
