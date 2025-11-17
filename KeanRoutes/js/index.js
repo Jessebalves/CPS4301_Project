@@ -13,7 +13,7 @@ document.getElementById("navSearch").addEventListener("keyup", function() {
 
 
   for (let i = 0; i < li.length; i++) {
-      const text = li[i].textContent || links[i].innerText;
+      const text = li[i].textContent;
       const parentLi = li[i].closest("li"); 
 
       if (text.toLowerCase().includes(filter)) {
