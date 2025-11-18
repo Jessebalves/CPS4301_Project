@@ -3,7 +3,8 @@ Web application created to help students of Kean University in Union to navigate
 
 <details>
   <summary>Table of Contents</summary>
-  - Summary
+  
+  - Summary  
   - Usage
   - Features
   - Technologies Used
