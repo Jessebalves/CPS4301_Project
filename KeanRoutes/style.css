@@ -6,32 +6,49 @@ body{
     background-color:hsl(280, 14%, 96%);
 }
 
-header{
+header {
     text-align: center;
-    /*color:rgb(15, 15, 150);*/
-    color: white; 
-    background-color: hsl(249, 80%, 30%);
-    border-bottom: 1px solid hsl(249, 80%, 30%);
+    background-color: var(--light-blue-accent);
+    color: var(--text-color-dark);
+    border-bottom: 1px solid var(--light-blue-accent);
+    padding: 20px 0; 
 }
 
-footer{
+footer {
     text-align: center;
-    color: black;
-    background-color: hsl(249, 80%, 30%);
-    color:white;
+    background-color: var(--light-blue-accent);
+    color: var(--text-color-dark);
     min-height: 500px;
-    overflow:hidden;
+    overflow: hidden;
+
+    position: relative; 
+    padding-bottom: 100px; /* Needs to be at least the height of the wave */
 }
 
 /*Ids associated with html elements*/
 #kean_logo{
-    width: 9%;
-    height: 9%;
+    width: 800px;
+    height: 400px;
+    box-shadow: none;
+    border: 10px solid rgba(0, 0, 0, 0.836);
+    border-radius: 75px;
+}
+
+#slogan-image{
+  width: 30%;
+    height: 30%;
+    box-shadow: none;
+    border: 10px solid rgba(0, 0, 0, 0.836);
+    border-radius: 75px;
 }
 
 #navigation_bar {
   margin: 0%;
   text-align: center;
+  background: linear-gradient(to right, var(--gradient-blue), var(--gradient-purple));
+  padding: 15px 0; /* Example padding */
+  box-shadow: 0 5px 15px rgba(1, 1, 1, 2); /* Subtle shadow for depth */
+  border-radius: 8px; /* Slightly rounded edges for modern feel */
 }
 
 #navigation_bar li {
@@ -39,7 +56,7 @@ footer{
   position: relative;
   z-index: 1000;
   float: left;
-  background-color:hsl(249, 80%, 30%);
+  background-color:hsla(0, 0%, 0%, 0.836);
   border-bottom: 1px solid white;
 }
 
@@ -71,7 +88,7 @@ footer{
 }*/
 
 #highlight_nav:hover{
-  background-color:hsl(216, 52%, 68%);
+  background-color:hsl(216, 100%, 25%);
 }
 
 
@@ -117,6 +134,52 @@ footer{
 .navigation_bar_container { 
     display: flex;
     justify-content: center;
+}
+
+.left-image-overlay {
+    /* Define the size and space for this image area */
+    width: 250px; 
+    height: 450px; /* Match the height of the map for vertical alignment */
+    margin-right: 40px; /* Space between this image and the map */
+    
+    /* Make the container look empty/integrated */
+    background-color: transparent; 
+    
+    /* Center the image within its own container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-graphic {
+    /* Style the image itself */
+    max-width: 300px; /* Ensure the image fits within the box */
+    max-height: 400px;
+    height: auto;
+    border-radius: 15px;
+    
+    /* Add a glow effect to match the logo/slogan */
+    filter: drop-shadow(0 0 5px var(--gradient-purple));
+}
+
+.right-image-overlay {
+    /* Dimensions and spacing */
+    width: 250px; 
+    height: 300px; /* Match the height of the map */
+    margin-left: 40px; /* Space between this image and the map */
+    
+    /* Center the image within its own container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 5px var(--gradient-blue));
+}
+
+.right-side-graphic {
+    /* Inherits sizing from .overlay-graphic, but apply specific rounding */
+    border-radius: 15px; 
+    /* You can apply a slight hue shift here if you want the glow to look purple instead of blue */
+    /* filter: drop-shadow(0 0 10px var(--gradient-purple)); */
 }
 
 .map_container{
@@ -307,4 +370,202 @@ button {
     overflow-x:hidden;
     max-height: 400%;
   }
+}
+
+:root {
+    --text-color-primary: #f0f0ff;    /* Light text */
+    --text-color-faded: #cccccc;      /* Faded for secondary text */
+    --bg-color-dark: #1e1e2f;         /* Deep purplish-dark background */
+    --accent-color: #00ffff;          /* Electric Cyan */
+    --light-blue-accent: #002d61; /* Solid Light Steel Blue */
+
+    --font-primary: 'Poppins', 'Inter', sans-serif;
+    --font-unique: 'JetBrains Mono', monospace;
+
+    --gradient-blue: #00ffff;   /* The bright blue from your slogan */
+    --gradient-purple: #ee00ee; /* The bright purple from your slogan */
+}
+
+body {
+    /* Use a clean, modern font */
+    font-family: var(--font-primary);
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-primary);
+    line-height: 1.6;
+}
+
+/* Headings should use the primary color */
+h1, h2, h3 {
+    color: var(--text-color-primary);
+    font-weight: 600; /* Slightly bolder */
+}
+
+.navbar a {
+    color: var(--text-color-faded); /* Start with faded text */
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+    /* ALL animations should be smooth (0.3s) */
+    transition: color 0.3s ease, transform 0.1s ease; 
+}
+
+/* Hover Animation: Fades text to bright accent */
+.navbar a:hover {
+    color: var(--accent-color); /* Change text to electric cyan */
+    /* Optional: Slight lift effect */
+    transform: translateY(-2px); 
+}
+
+/* Click Animation: Gives a "press" or "grounded" feeling */
+.navbar a:active {
+    color: #00cccc; /* Slightly darker cyan on press */
+    transform: translateY(1px); /* Pushes the link down slightly */
+}
+
+/* Optional: Add an underglow effect on hover */
+.navbar a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color: var(--accent-color);
+    box-shadow: 0 0 8px var(--accent-color); /* The 'glow' */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* ---------------------------------------------------------------- */
+/* GLOW EFFECT APPLIED TO THE OUTER CONTAINER: .map_container */
+/* ---------------------------------------------------------------- */
+.map_container {
+    position: relative; /* CRITICAL: Allows pseudo-element to be positioned relative to this */
+    margin: 40px auto;
+    padding: 25px; /* This padding creates the space for the glow */
+    border-radius: 12px;
+    background-color: transparent; /* Main container itself is transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensures map content is above the glow */
+}
+
+.map_container::before {
+    content: ''; /* CRITICAL for pseudo-elements */
+    position: absolute;
+    top: -10px;    /* Adjust these values to control the glow's spread */
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(to right, var(--gradient-blue), var(--gradient-purple)); /* OMBRE GLOW! */
+    border-radius: 15px; /* Slightly larger radius than container for smooth glow */
+    z-index: -1; /* Puts the glow BEHIND the map container */
+    filter: blur(15px); /* BLUR THE GRADIENT TO CREATE THE GLOW EFFECT */
+    opacity: 0.8; /* Make it slightly transparent for a softer glow */
+}
+
+/* ---------------------------------------------------------------- */
+/* STYLES FOR THE INNER MAP ELEMENT: #map */
+/* ---------------------------------------------------------------- */
+#map {
+    /* Set the actual dimensions for the map */
+    width: 800px;
+    height: 450px; 
+    
+    background-color: #000000; /* Ensures map has a dark background */
+    border-radius: 8px; 
+    overflow: hidden; 
+    z-index: 2; /* Ensure map is above the pseudo-element */
+}
+
+.wave-container {
+    position: absolute; /* Allows precise placement */
+    bottom: 0;          /* Positions the container at the very bottom */
+    left: 0;
+    width: 100%;
+    height: 100px;      /* Height of the wave visual */
+    overflow: hidden;   /* Hides the parts of the wave that extend beyond the container */
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2364b5f6' fill-opacity='0.5' d='M0,192L48,170.7C96,149,192,107,288,112C384,117,480,171,576,160C672,149,768,75,864,69.3C960,64,1056,128,1152,144C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: 1000px 100px; /* Size of the background SVG */
+    background-repeat: repeat-x;
+}
+
+/* Define the wave movement (moving left) */
+@keyframes wave-move {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px; /* Moves the wave image 1000px to the left */
+    }
+}
+
+/* Apply animation with different speeds for fluid look */
+#wave1 {
+    z-index: 10;
+    opacity: 0.3;
+    background-position-x: 400px;
+    animation: wave-move 30s linear infinite; 
+}
+#wave2 {
+    z-index: 9;
+    opacity: 0.3;
+    background-position-x: 300px;
+    animation: wave-move 15s linear infinite;
+}
+#wave3 {
+    z-index: 8;
+    opacity: 0.3;
+    background-position-x: 200px;
+    animation: wave-move 10s linear infinite;
+}
+#wave4 {
+    z-index: 7;
+    opacity: 0.3;
+    background-position-x: 100px;
+    animation: wave-move 5s linear infinite; 
+}
+#wave5 {
+    z-index: 7;
+    opacity: 0.3;
+    background-position-x: 225px;
+    animation: wave-move 25s linear infinite; 
+}
+#wave6 {
+    z-index: 7;
+    opacity: 0.3;
+    background-position-x: 125px;
+    animation: wave-move 7s linear infinite; 
+}
+#wave7 {
+    z-index: 7;
+    opacity: 0.3;
+    background-position-x: 350px;
+    animation: wave-move 12s linear infinite; 
+}
+#wave8 {
+    z-index: 7;
+    opacity: 0.3;
+    background-position-x: 250px;
+    animation: wave-move 17s linear infinite; 
+}
+#wave9 {
+    z-index: 7;
+    opacity: 0.3;
+    background-position-x: 150px;
+    animation: wave-move 22s linear infinite; 
+}
+#wave10 {
+    z-index: 7;
+    opacity: 0.3;
+    background-position-x: 50px;
+    animation: wave-move 27s linear infinite; 
 }
