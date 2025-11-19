@@ -1,47 +1,48 @@
-/*Normal html elements*/
-body{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color:hsl(280, 14%, 96%);
+header {
+  text-align: center;
+  background-color: var(--light-blue-accent);
+  color: var(--text-color-dark);
+  border-bottom: 1px solid var(--light-blue-accent);
+  padding: 0px 0; 
 }
 
-header {
-    text-align: center;
-    background-color: var(--light-blue-accent);
-    color: var(--text-color-dark);
-    border-bottom: 1px solid var(--light-blue-accent);
-    padding: 20px 0; 
+body{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:hsl(280, 14%, 96%);
 }
 
 footer {
-    text-align: center;
-    background-color: var(--light-blue-accent);
-    color: var(--text-color-dark);
-    min-height: 500px;
-    overflow: hidden;
+  text-align: center;
+  background-color: var(--light-blue-accent);
+  color: var(--text-color-dark);
+  min-height: 500px;
+  overflow: hidden;
 
-    position: relative; 
-    padding-bottom: 100px; /* Needs to be at least the height of the wave */
+  position: relative; 
+  padding-bottom: 100px; /* Needs to be at least the height of the wave */
 }
 
-/*Ids associated with html elements*/
+/*Main logo ID*/
 #kean_logo{
-    width: 40%;
-    height: 10%;
-    box-shadow: none;
-    border: 10px solid var(--bg-color-dark);
-    border-radius: 75px;
+  width: 40%;
+  height: 10%;
+  box-shadow: none;
+  border: 10px solid var(--bg-color-dark);
+  border-radius: 75px;
 }
 
+/*Slogan in footer*/
 #slogan-image{
   width: 95%;
-    height: 10%;
-    box-shadow: none;
-    border: 5px solid var(--bg-color-dark);
-    border-radius: 75px;
+  height: 10%;
+  box-shadow: none;
+  border: 5px solid var(--bg-color-dark);
+  border-radius: 75px;
 }
 
+/*main navigation bar id*/
 #navigation_bar {
   margin: 0%;
   text-align: center;
@@ -51,6 +52,7 @@ footer {
   border-radius: 8px; /* Slightly rounded edges for modern feel */
 }
 
+/*ID associated with navbar main tabs(Buildings,Food,Events, Other)*/
 #navigation_bar li {
   display: block;
   position: relative;
@@ -60,6 +62,8 @@ footer {
   border-bottom: 1px solid white;
 }
 
+/*Associated with whole list underneath main tab*/
+/* ex) all li elements contained within main tab(Building list)*/
 #navigation_bar ul {
   position: absolute;
   display: none;
@@ -71,33 +75,28 @@ footer {
   padding: 0;
   text-decoration: none;
   width: 200px;
-  line-height: 450%;
+  line-height: 400%;
   color: #ffffff;
   float: none;
   text-align: center;
 }
 
-
+/*Associated with entries within main tab*/
 #navigation_bar li li a {
   font-size: 75%;
 }
 
-
-/*#navigation_bar li:hover, li:active, li.click{
-  background-color:hsl(216, 52%, 68%);
-}*/
-
+/*Changes navbar color when hovering over entry*/
 #highlight_nav:hover{
   background-color:hsl(216, 68%, 56%);
 }
 
-
+/*Display entries and descriptions on hover*/
 #navigation_bar li:hover ul{
   display: block;
 }
 
-
-/*Side bar description box*/
+/*Displays description in certain position relative to entry on hover*/
 #navigation_bar li li:hover ul,li li:active ul, li li:focus ul{
   position:relative;
   display: block;
@@ -105,30 +104,33 @@ footer {
   margin-top: -50px;
 }
 
+/*Hides description if not hovering over entry*/
 #navigation_bar li li ul, li li:active ul{
  margin-top: -10000px;
 }
 
+/*Background color of description box*/
 #navigation_bar ul ul li{
   background: white;
   
 }
 
+/*Font size of text in description box*/
 #navigation_bar ul ul li p{
   font-size: larger;
 }
 
-/*Changed this 11/2*/
-#navigation_bar ul ul li:hover,ul ul li:active, ul ul li:focus{
-  display:block;
-  background-color: white;
-}
-
-
+/*Text color and width of description box on navbar*/
 #navigation_bar ul ul li a{
   color:black;
   width:150px;
 }
+
+/*#navigation_bar ul ul li:hover,ul ul li:active, ul ul li:focus{
+  display:block;
+  background-color: purple;
+}*/
+
 
 /*Classes associated with html elements*/
 .navigation_bar_container { 
@@ -194,12 +196,14 @@ footer {
   gap:1%;
 }
 
+/*Holds team members photos, names, and roles*/
 .person_container{
   display: inline-block;
   text-align: center;
   justify-content: center;
 }
 
+/*Holds all team members divs for interactive resizing*/
 .dev_contain{
   display: inline-flex;
   gap:10px;
@@ -214,7 +218,6 @@ footer {
 .display_desc_left_side{
   right:370px;
   top:0px;
-  /*margin-left:2000px;*/
 }
 
 #map {
@@ -293,8 +296,6 @@ button {
    width:365px;
 }
 
-
-
 #testing{
    overflow-y: scroll;
    direction:ltr;
@@ -306,8 +307,7 @@ button {
    width:200px;
 }
 
-
-/*For mobile viewing styling*/
+/*MOBILE VIEW STYLING*/
 @media screen and (max-width:870px){
   #navigation_bar li a {
     width: 100px;
@@ -324,11 +324,10 @@ button {
   
 }
 
-#navigation_bar ul ul li a{
-  color:black;
-  width:100px;
-
-}
+  #navigation_bar ul ul li a{
+    color:black;
+    width:100px;
+    }
 
   .display_desc_left_side{
     right:200px;
