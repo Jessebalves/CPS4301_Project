@@ -28,7 +28,7 @@ document.getElementById("navSearch").addEventListener("keyup", function() {
       }
   }
 
-  if(filter==""){
+  if(navKeywordEnteredClean==""){
     for(let i = 0; i < li.length;i++){
       Building_scroll.style.overflow="scroll";
       Building_scroll.style.overflowX= "hidden";
@@ -40,4 +40,5 @@ document.getElementById("navSearch").addEventListener("keyup", function() {
       Other_scroll.style.overflowX = "hidden";
     }
   }
+
 });
