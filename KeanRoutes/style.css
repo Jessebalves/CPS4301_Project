@@ -122,7 +122,7 @@ footer {
 /*Text color and width of description box on navbar*/
 #navigation_bar ul ul li a{
   color:black;
-  width:150px;
+  width:0px;
 }
 
 /*#navigation_bar ul ul li:hover,ul ul li:active, ul ul li:focus{
@@ -566,4 +566,5 @@ h1, h2, h3 {
     opacity: 0.3;
     background-position-x: 50px;
     animation: wave-move 27s linear infinite; 
+
 }
