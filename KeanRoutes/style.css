@@ -98,7 +98,6 @@ footer {
 
 /*Displays description in certain position relative to entry on hover*/
 #navigation_bar li li:hover ul,li li:active ul, li li:focus ul{
-  position:relative;
   display: block;
   margin-left: 220px;
   margin-top: -50px;
