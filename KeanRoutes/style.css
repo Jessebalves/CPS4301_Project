@@ -75,16 +75,20 @@ footer {
   padding: 0;
   text-decoration: none;
   width: 200px;
-  line-height: 400%;
+  height: 60px;
   color: #ffffff;
   float: none;
   text-align: center;
+  padding-top:15px;
 }
 
 /*Associated with entries within main tab*/
 #navigation_bar li li a {
   font-size: 75%;
+  line-height: 10px;
 }
+
+#navigation_bar 
 
 /*Changes navbar color when hovering over entry*/
 #highlight_nav:hover{
@@ -214,10 +218,10 @@ footer {
   gap:1%;
 }
 
-.display_desc_left_side{
+/*.display_desc_left_side{
   right:370px;
   top:0px;
-}
+}*/
 
 #map {
   width: 750px;
@@ -310,25 +314,24 @@ button {
 @media screen and (max-width:870px){
   #navigation_bar li a {
     width: 100px;
+    height:80px;
   }
   #navigation_bar li{
     width:100px;
   }
   
-
   #navigation_bar li li:hover ul, li li:active ul{
   display: block;
-  margin-left: 100px;
+  margin-left: 3000px;
   margin-top: -60px;
-  
 }
 
-  #navigation_bar ul ul li a{
+  /*#navigation_bar ul ul li a{
     color:black;
-    width:100px;
-    }
+    width:0px;
+    }*/
 
-  .display_desc_left_side{
+  /*.display_desc_left_side{
     right:200px;
     top:6px;
   }
@@ -343,7 +346,7 @@ button {
 
   #raise_description_three_lines{
     top:-95px;
-  }
+  }*/
 
    #Academic_Building_scrollin{
     width:115px;
@@ -566,5 +569,4 @@ h1, h2, h3 {
     opacity: 0.3;
     background-position-x: 50px;
     animation: wave-move 27s linear infinite; 
-
 }
