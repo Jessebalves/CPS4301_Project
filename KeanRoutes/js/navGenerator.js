@@ -16,8 +16,12 @@ function createCategory(name, items) {
         childLi.classList.add("testing"); //formatting
         const childA = document.createElement("a"); //clickable item
         childA.id = place.id; //ID from data.js
+        const paragraph_tag = document.createElement("p"); //Hidden description
+        paragraph_tag.style.display="none"; //Hide the text so it doesnt appear in entry
+        paragraph_tag.innerHTML = place.description; //Assign descriptions from data.js to p tag
         childA.textContent = place.name; //display name from data.js
         childLi.appendChild(childA); //add <a> inside item <li>
+        childLi.appendChild(paragraph_tag); // add <p style = "display:none;"
         ul.appendChild(childLi); //add this item to the category <ul>
     });
     li.appendChild(ul); //add the full item <ul> into the main category <li>
