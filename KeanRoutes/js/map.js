@@ -24,20 +24,23 @@ function initMap() {
     } else {
         document.getElementById("output").textContent = "Geolocation not supported.";
     }
-    //Loading Markers
-    Object.values(locations).forEach(group => {
-        group.forEach(loc =>{
-            const marker = new google.maps.Marker({
-                position: { lat: loc.lat, lng: loc.lng},
-                map,
-                title: loc.name
-            });
-            const infoWindow = new google.maps.InfoWindow({
-                content: `<strong>${loc.name}</strong>`
-            });
-            marker.addListener("click", () => {
-                infoWindow.open(map, marker);
-            });
+    //Markers
+    Object.values(locations).forEach(category => {
+        Object.values(category).forEach(loc => {
+            // Place markers with data that has lng and lat
+            if (loc.lat && loc.lng) {
+                const marker = new google.maps.Marker({ //Google's markers
+                    position: { lat: loc.lat, lng: loc.lng },
+                    map,
+                    title: loc.name
+                });
+                const infoWindow = new google.maps.InfoWindow({
+                    content: `<strong>${loc.name}</strong>`
+                });
+                marker.addListener("click", () => {
+                    infoWindow.open(map, marker);
+                });
+            }
         });
     });
 }
