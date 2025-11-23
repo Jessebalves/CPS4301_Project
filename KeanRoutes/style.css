@@ -392,7 +392,13 @@ body {
     font-family: var(--font-primary);
     background-color: var(--bg-color-dark);
     color: var(--text-color-primary);
+    color:black;
     line-height: 1.6;
+}
+
+
+footer{
+  color:white;
 }
 
 /* Headings should use the primary color */
