@@ -68,6 +68,8 @@ footer {
   position: absolute;
   display: none;
   padding: 0;
+  overflow: scroll;
+  height:200px;
 }
 
 #navigation_bar li a {
