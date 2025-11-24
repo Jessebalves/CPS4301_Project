@@ -1,6 +1,9 @@
 let map, directionsService, directionsRenderer, autocomplete;
 let userLocation = null;
+let userMarker = null;
+let geocoder;
 function initMap() {
+    geocoder = new google.maps.Geocoder();
     //Generating map, route, and displaying route.
     directionsService = new google.maps.DirectionsService();
     directionsRenderer = new google.maps.DirectionsRenderer();
@@ -16,45 +19,65 @@ function initMap() {
     document.getElementById("route-btn").addEventListener("click", getRoute);
     //Trying to get user's location
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(success, error, {
+        //Live tracking
+        navigator.geolocation.watchPosition(success, error, {
             enableHighAccuracy: true,
             timeout: 6000,
-            maximumAge: 0,
+            maximumAge: 0
         });
     } else {
         document.getElementById("output").textContent = "Geolocation not supported.";
     }
     //Markers
-    Object.values(locations).forEach(category => {
+    Object.entries(locations).forEach(([categoryName, category]) => {
         Object.values(category).forEach(loc => {
-            // Place markers with data that has lng and lat
-            if (loc.lat && loc.lng) {
-                const marker = new google.maps.Marker({ //Google's markers
-                    position: { lat: loc.lat, lng: loc.lng },
-                    map,
-                    title: loc.name
-                });
-                const infoWindow = new google.maps.InfoWindow({
-                    content: `<strong>${loc.name}</strong>`
-                });
-                marker.addListener("click", () => {
-                    infoWindow.open(map, marker);
-                });
-            }
+            //Building custom markers
+            if (categoryName !== "building" && categoryName !== "food") return; //Markers for only buildings and food
+            if (!loc.lat || !loc.lng) return; // Skip entries without coordinates
+            // Custom SVG Marker Icon
+            const icon = {
+                //Marker icon, extracted from Material Icon from google, and get the svg
+                path: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z",
+                fillColor: categoryName === "building" ? "#2079deff" : "#e77e29ff",
+                fillOpacity: 1,
+                strokeWeight: 1,
+                strokeColor: "#000", //Outline of each marker
+                scale: categoryName === "building" ? 1.2 : 1.0, //Boolean for size of markers
+                anchor: new google.maps.Point(12, 24) //Location of how the marker should be located
+            };
+            //Create markers
+            const marker = new google.maps.Marker({
+                position: { lat: loc.lat, lng: loc.lng },
+                map,
+                title: loc.name,
+                icon: icon
+            });
+            //Displays the information need it when clicking on the marker
+            const infoWindow = new google.maps.InfoWindow({
+                content: `<strong>${loc.name}</strong>`
+            });
+            //open infoWindow when clicking marker
+            marker.addListener("click", () => {
+                infoWindow.open(map, marker);
+            });
         });
     });
 }
-//Setting marker on your current location
+//Setting moving marker to your current location
 function success(pos) {
     const lat = pos.coords.latitude;
     const lng = pos.coords.longitude;
     userLocation = { lat, lng };
     map.setCenter(userLocation);
-    new google.maps.Marker({
-        position: userLocation,
-        map,
-        title: "Your location",
-    });
+    if (!userMarker) {
+        userMarker = new google.maps.Marker({
+            position: userLocation,
+            map,
+            title: "Your location",
+        });
+    } else {
+        userMarker.setPosition(userLocation); // Moves marker
+    }
     document.getElementById("output").innerHTML = `
         <b>Latitude:</b> ${lat.toFixed(5)}<br>
         <b>Longitude:</b> ${lng.toFixed(5)}
@@ -70,23 +93,24 @@ function getRoute() {
         return;
     }
     //Places library setting route
-    const place = autocomplete.getPlace();
-    if (!place || !place.geometry) {
-        alert("Please select a valid destination from the list.");
-        return;
-    }
+//    const place = autocomplete.getPlace();
+//    if (!place || !place.geometry) {
+//        alert("Please select a valid destination from the list.");
+//        return;
+//    }
     const destination = {
         lat: place.geometry.location.lat(),
         lng: place.geometry.location.lng(),
     };
-    calculateAndDisplayRoute(userLocation, destination);
+    const mode = document.querySelector("input[name='mode']:checked").value;
+    calculateAndDisplayRoute(userLocation, destination, mode);
 }
-function calculateAndDisplayRoute(origin, destination) {
+function calculateAndDisplayRoute(origin, destination, mode) {
     directionsService.route(
     {
         origin,
         destination,
-        travelMode: google.maps.TravelMode.DRIVING, //Set by default, we can change it later, or make the user select what they want.
+        travelMode: google.maps.TravelMode[mode], //cahnges depending on selected traversal option
     },
     (response, status) => {
         if (status === "OK") {
