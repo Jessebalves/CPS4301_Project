@@ -5,32 +5,32 @@ const locations = {
             name: "Administration Building",
             address: "Administration Building, Union, NJ, USA",
             description: "Offers assistance with registration, financial questions + tuition.",
-            lat: null,
-            lng: null
+            lat: 40.679686,
+            lng: -74.236328
         },
         admissions_office: {
             id: "admissions_office",
             name: "Admissions Office",
             address: "Office of Admissions, Union, NJ, USA",
             description: "1000 Morris Ave Ste 1, Union, NJ 07083",
-            lat: null,
-            lng: null
+            lat: 40.68139,
+            lng: -74.23515
         },
         barlett_hall: {
             id: "barlett_hall",
             name: "Barlett Hall",
             address: "Bartlett Hall, Morris Avenue, Union, NJ, USA",
             description: "Upperclassmen Residence Halls 1000 Morris Avenue",
-            lat: null,
-            lng: null
+            lat: 40.67604798368305,
+            lng: -74.23433317546859
         },
         bruce_hall: {
             id: "bruce_hall",
             name: "Bruce Hall",
             address: "Bruce Hall, Morris Avenue, Union, NJ, USA",
             description: "Classrooms + scientific labs biology and medical.",
-            lat: null,
-            lng: null
+            lat: 40.680361861088684,
+            lng: -74.2349718889611
         },
         carole_hynes_field_house: {
             id: "carole_hynes",
@@ -45,32 +45,32 @@ const locations = {
             name: "Center for Academic Success",
             address: "Center for Academic Success, Morris Avenue, Kean University, Union, NJ, USA",
             description: "Classrooms mostly for history, english, writing etc.",
-            lat: null,
-            lng: null
+            lat: 40.678590671998926,
+            lng: -74.23424364177416
         },
         cougar_hall: {
             id: "cougar_hall",
             name: "Cougar Hall",
             address: "Cougar Hall, Morris Avenue, Union, NJ, USA",
             description: "Residence dorms, cafe, great room lounge, game room, business center.",
-            lat: null,
-            lng: null
+            lat: 40.679129482142685,
+            lng: -74.23674731411046
         },
         dangola_gym: {
             id: "dang_gym",
             name: "D'Angola Gymnasium",
             address: "D'Angola Gymnasium, Morris Avenue, Union, NJ, USA",
             description: "Fitness center with machines, free weights, cardio equipment, and pool.",
-            lat: null,
-            lng: null
+            lat: 40.679837050815905,
+            lng: -74.23820720798314
         },
         downs_hall: {
             id: "downs_hall",
             name: "Downs Hall",
             address: "Downs Hall, Kean University, Morris Avenue, Union, NJ, USA",
             description: "Meeting rooms, health services, counseling services, police HQ.",
-            lat: null,
-            lng: null
+            lat: 40.67683466227177,
+            lng: -74.2325082141251
         },
         glab: {
             id: "glab",
@@ -85,13 +85,13 @@ const locations = {
             name: "Harwood Arena",
             address: "Harwood Arena, Morris Ave, Union, NJ, USA",
             description: "Administrative offices for sports + three basketball courts.",
-            lat: null,
-            lng: null
+            lat: 40.680648675917624,
+            lng: -74.2373657418363
         },
         dghh: {
             id: "dghh",
             name: "Dorothy Grant Hennings Hall",
-            address: "Hennings Hall, Kean University, Morris Avenue, Union, NJ, USA",
+            address: "",
             description: "Classrooms connected to Hutchinson Hall and George Hennings Hall.",
             lat: null,
             lng: null
@@ -109,24 +109,24 @@ const locations = {
             name: "Wilkins Theatre",
             address: "Wilkins Theatre, Morris Avenue, Union, NJ, USA",
             description: "956-seat theatre for performances and events.",
-            lat: null,
-            lng: null
+            lat: 40.67869734828321,
+            lng: -74.23226095533936
         },
         nancy_thompson_library: {
             id: "nancy_thompson_library",
             name: "Nancy Thompson Library",
             address: "Nancy Thompson Library, Morris Avenue, Union, NJ, USA",
             description: "Library building with Starbucks.",
-            lat: null,
-            lng: null
+            lat: 40.67823631484569,
+            lng: -74.23348592412808
         },
         hutchinson_hall: {
             id: "hutchinson_hall",
             name: "Hutchinson Hall",
             address: "Hutchinson Hall, Kean University, Morris Avenue, Union, NJ, USA",
             description: "Political science, culture sciences, design studios.",
-            lat: null,
-            lng: null
+            lat: 40.67960243240396,
+            lng: -74.23360070502521
         },
         hynes_hall: {
             id: "hynes_hall",
@@ -343,8 +343,8 @@ const locations = {
             name: "Kean Hall Parking Lot",
             address: "Kean Hall Lot, Green Lane, Union, NJ, USA",
             description: "Parking near the Green Lane entrance and across from GLAB.",
-            lat: null,
-            lng: null
+            lat: 40.681734942081185,
+            lng: -74.23593343985706
         },
         kean_parking_deck: {
             id: "kean_parking_deck",
