@@ -42,7 +42,7 @@ function initMap() {
                 fillOpacity: 1,
                 strokeWeight: 1,
                 strokeColor: "#000", //Outline of each marker
-                scale: categoryName === "building" ? 1.2 : 1.0, //Boolean for size of markers
+                scale: categoryName === "building" ? 0.6 : 1.0, //Boolean for size of markers
                 anchor: new google.maps.Point(12, 24) //Location of how the marker should be located
             };
             //Create markers
@@ -123,4 +123,5 @@ function calculateAndDisplayRoute(origin, destination, mode) {
         }
     }
     );
+
 }
