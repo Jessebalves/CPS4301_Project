@@ -141,61 +141,61 @@ const locations = {
             name: "Miron Student Center",
             address: "Miron Student Center, Kean University, Morris Avenue, Union, NJ, USA",
             description: "Food court, game room, convenience store.",
-            lat: null,
-            lng: null
+            lat: 40.67763386088302,
+            lng: -74.23496760633356
         },
         whiteman_hall: {
             id: "whiteman_hall",
             name: "Whiteman Hall",
             address: "Whiteman Hall, Kean University, Morris Avenue, Union, NJ, USA",
             description: "Freshmen dormitories + mailroom.",
-            lat: null,
-            lng: null
+            lat: 40.676409901714464,
+            lng: -74.23316361728445
         },
         freshman_residence_hall: {
             id: "freshman_residence_hall",
             name: "Freshman Residence Hall",
             address: "Freshman Residence Hall, Kean University, Morris Avenue, Union, NJ, USA",
             description: "Freshmen dormitories.",
-            lat: null,
-            lng: null
+            lat: 40.67651588217737,
+            lng: -74.23468304875892
         },
         upperclassman_residence_hall: {
             id: "upperclassman_residence_hall",
             name: "Upperclassman Residence Hall",
             address: "Upperclass Residence Hall, Kean University, Morris Avenue, Elizabeth, NJ, USA",
             description: "Upperclassmen dorms and Kean Kitchen buffet.",
-            lat: null,
-            lng: null
+            lat: 40.67645893673954,
+            lng: -74.23535203824729
         },
         dougall_hall: {
             id: "dougall_hall",
             name: "Dougall Hall",
             address: "Dougall Hall, Kean University, Morris Avenue, Union, NJ, USA",
             description: "Freshmen dorms + Cougar Cardio Room.",
-            lat: null,
-            lng: null
+            lat: 40.676372192583344,
+            lng: -74.23373771204363
         },
         burch_hall: {
             id: "burch_hall",
             name: "Burch Hall",
             address: "Burch Hall, Morris Avenue, Union, NJ, USA",
             description: "Dormitories.",
-            lat: null,
-            lng: null
+            lat: 40.675862178443765,
+            lng: -74.23363251856394
         },
         rogers_hall: {
             id: "rogers_hall",
             name: "Rogers Hall",
             address: "Rogers Hall, Kean University, Morris Avenue, Union, NJ, USA",
             description: "Dormitories.",
-            lat: null,
-            lng: null
+            lat: 40.67520548923301,
+            lng: -74.23404857150076
         },
         george_hennings_hall: {
             id: "george_hennings_hall",
             name: "George Hennings Hall",
-            address: "Hennings Hall, Kean University, Morris Avenue, Union, NJ, USA",
+            address: "",
             description: "Classrooms, faculty offices, computer labs.",
             lat: null,
             lng: null
@@ -205,24 +205,24 @@ const locations = {
             name: "North Avenue Academic Building (NAAB)",
             address: "North Avenue Academic Building [NAAB], Morris Avenue, Union, NJ, USA",
             description: "Classrooms, faculty offices, computer labs.",
-            lat: null,
-            lng: null
+            lat: 40.67656486542418,
+            lng: -74.22865162956666
         },
         stem_building: {
             id: "stem_building",
             name: "STEM Building",
             address: "Kean University STEM Building, Morris Avenue, Union, NJ, USA",
             description: "STEM courses.",
-            lat: null,
-            lng: null
+            lat: 40.67997337255275,
+            lng: -74.23198919858187
         },
         townsend_hall: {
             id: "townsend_hall",
             name: "Townsend Hall",
             address: "Townsend Hall, Kean University 1000, Morris Avenue, Union, NJ, USA",
             description: "Classrooms and lockers.",
-            lat: null,
-            lng: null
+            lat: 40.679879565933646,
+            lng: -74.23561966760393
         },
         liberty_hall: {
             id: "liberty_hall",
