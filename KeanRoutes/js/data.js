@@ -77,8 +77,8 @@ const locations = {
             name: "Green Lane Academic Building (GLAB)",
             address: "Green Lane Academic Building [GLAB], Morris Avenue, Union, NJ, USA",
             description: "Classrooms, faculty offices, full-service bookstore/library.",
-            lat: 40.6826,
-            lng: -74.2361
+            lat: 40.68281691337338, 
+            lng: -74.23627260485527
         },
         harwood_arena: {
             id: "harwood_arena",
@@ -91,18 +91,18 @@ const locations = {
         dghh: {
             id: "dghh",
             name: "Dorothy Grant Hennings Hall",
-            address: "",
+            address: "Kean University, Hennings Hall, Kean University, 1000 Morris Ave, Union, NJ 07083",
             description: "Classrooms connected to Hutchinson Hall and George Hennings Hall.",
-            lat: null,
-            lng: null
+            lat: 40.68011145419468, 
+            lng: -74.23396057935489
         },
         tech_building: {
             id: "tech_building",
             name: "Technology Building",
-            address: "",
+            address: "Office of Computer and Information Services, Kean University, 1000 Morris Ave, Union, NJ 07083",
             description: "Classrooms, faculty offices, Child Care and Development Center.",
-            lat: null,
-            lng: null
+            lat: 40.679447623113525, 
+            lng: -74.23479207335788
         },
         wilkins_theatre: {
             id: "wilkins_theatre",
@@ -133,8 +133,8 @@ const locations = {
             name: "Hynes Hall",
             address: "Hynes Hall, Morris Avenue, Union, NJ, USA",
             description: "Meeting rooms, classrooms, presentation spaces.",
-            lat: 40.6828,
-            lng: -74.23285
+            lat: 40.68281532457947, 
+            lng: -74.23240958168665
         },
         miron_student_center: {
             id: "miron_student_center",
@@ -195,10 +195,10 @@ const locations = {
         george_hennings_hall: {
             id: "george_hennings_hall",
             name: "George Hennings Hall",
-            address: "",
+            address: "Science Building, 1000 Morris Ave, Union, NJ 07083",
             description: "Classrooms, faculty offices, computer labs.",
-            lat: null,
-            lng: null
+            lat: 40.68042447479942, 
+            lng: -74.23445896475162
         },
         north_ave_building: {
             id: "north_ave_building",
@@ -213,8 +213,8 @@ const locations = {
             name: "STEM Building",
             address: "Kean University STEM Building, Morris Avenue, Union, NJ, USA",
             description: "STEM courses.",
-            lat: 40.67997337255275,
-            lng: -74.23198919858187
+            lat: 40.67988772385432, 
+            lng: -74.2310307328702
         },
         townsend_hall: {
             id: "townsend_hall",
@@ -229,24 +229,24 @@ const locations = {
             name: "Liberty Hall Academic Center",
             address: "Liberty Hall Academic Center, Morris Avenue, Union, NJ, USA",
             description: "Miscellaneous courses such as history.",
-            lat: null,
-            lng: null
+            lat: 40.679889948617436, 
+            lng: -74.22770824305618
         },
         sozio_hall: {
             id: "sozio_hall",
             name: "Sozio Hall",
             address: "Sozio Hall, Kean University, Morris Avenue, Union, NJ, USA",
             description: "Dormitories.",
-            lat: null,
-            lng: null
+            lat: 40.67560969987679, 
+            lng: -74.23469303577193
         },
         nathan_weiss: {
             id: "nathan_weiss",
             name: "Nathan Weiss Graduate College",
             address: "Nathan Weiss Graduate College, North Avenue, Kean University, Hillside, NJ, USA",
             description: "Graduate college building connected to Enlow Recital Hall.",
-            lat: null,
-            lng: null
+            lat: 40.67993158669318, 
+            lng: -74.22422400167669
         }
     },
     parking: {
@@ -255,88 +255,88 @@ const locations = {
             name: "Bruce Hall Parking Lot",
             address: "Bruce Hall, Morris Avenue, Union, NJ, USA",
             description: "Parking closest to the Bruce Hall entrance and George Hennings Hall side entrance. Yellow line spaces are staff-only.",
-            lat: null,
-            lng: null
+            lat: 40.68097414152229, 
+            lng: -74.23459369532694
         },
         cougar_hall_parking: {
             id: "cougar_hall_parking",
             name: "Cougar Hall Parking Lot",
             address: "Cougar Hall, Morris Avenue, Union, NJ, USA",
             description: "Staff-only parking lot behind Cougar Hall dorm.",
-            lat: null,
-            lng: null
+            lat: 40.67863301015854, 
+            lng: -74.23759765012414
         },
         dang_gym_parking: {
             id: "dang_gym_parking_lot",
             name: "D'Angola Gym Parking Lot",
             address: "D’Angola Gym, Morris Avenue, Union, NJ, USA",
             description: "Staff parking next to D'Angola Gym. Small additional staff lot across the gym.",
-            lat: null,
-            lng: null
+            lat: 40.67937965557334, 
+            lng: -74.23870946471163
         },
         glab_parking: {
             id: "glab_parking",
             name: "GLAB Parking Lot",
             address: "GLAB Parking, Union, NJ, USA",
             description: "Parking next to the Green Lane Academic Building for classes or bookstore visits.",
-            lat: null,
-            lng: null
+            lat: 40.68261048379545, 
+            lng: -74.23702489410792
         },
         harwood_parking: {
             id: "harwood_parking",
             name: "Harwood Arena Parking Lot",
             address: "Harwood Arena, Morris Avenue, Union, NJ, USA",
             description: "Parking lot next to Harwood Arena.",
-            lat: null,
-            lng: null
+            lat: 40.68091419307597, 
+            lng: -74.23693862473093
         },
         hennings_hall_parking: {
             id: "hennings_hall_parking",
             name: "Hennings Hall Parking Lot",
             address: "Hennings Hall, Kean University, Morris Avenue, Union, NJ, USA",
             description: "Parking in front of George Hennings Hall and Dorothy Grant Hennings Hall. Yellow lines = staff only.",
-            lat: null,
-            lng: null
+            lat: 40.68024298591954,  
+            lng: -74.23323157989552
         },
         hynes_hall_parking: {
             id: "hynes_hall_parking",
             name: "Hynes Hall Parking Lot",
-            address: "",
+            address: "Hynes Hall, Morris Avenue, Union, NJ, USA",
             description: "Parking around Hynes Hall.",
-            lat: null,
-            lng: null
+            lat: 40.68259006266706, 
+            lng: -74.2327172145474 
         },
         hynes_hall_overflow: {
             id: "hynes_hall_overflow_parking",
             name: "Hynes Hall Overflow Parking Lot",
             address: "",
             description: "Extra parking space near Hynes Hall.",
-            lat: null,
-            lng: null
+            lat: 40.68292649579573, 
+            lng: -74.23028414603303
         },
         east_campus_parking: {
             id: "e_campus_parking",
             name: "East Campus Parking Lot",
             address: "",
             description: "Parking lot near Nathan Weiss Graduate College on East Campus.",
-            lat: null,
-            lng: null
+            lat: 40.680923997993226, 
+            lng: -74.22464000136148
         },
         east_campus_overflow: {
             id: "e_campus_overflow_parking",
             name: "East Campus Overflow Parking Lot",
             address: "",
             description: "Extra parking space on East Campus.",
-            lat: null,
-            lng: null
+            lat: 40.68173554380717, 
+            lng: -74.22535164402048
         },
         east_campus_upper: {
             id: "e_campus_upper_parking",
             name: "East Campus Upper Parking Lot",
             address: "Enlow Recital Hall, North Avenue, Hillside, NJ, USA",
             description: "Staff parking lot near Enlow Recital Hall.",
-            lat: null,
-            lng: null
+            lat: 40.68012897889286, 
+            lng: -74.22330577537844
         },
         kean_hall_parking: {
             id: "kean_hall_parking",
@@ -357,42 +357,42 @@ const locations = {
         liberty_hall_parking: {
             id: "lmac_parking",
             name: "Liberty Hall Parking Lot",
-            address: "",
+            address: "Liberty Hall Academic Center, Morris Avenue, Union, NJ, USA",
             description: "Parking next to Liberty Hall Academic Center.",
-            lat: null,
-            lng: null
+            lat: 40.680205173840044, 
+            lng: -74.2274378207145
         },
         stem_parking: {
             id: "stem_parking",
             name: "STEM Parking Lot",
             address: "Kean University STEM Building, Morris Avenue, Union, NJ, USA",
             description: "Parking in front of the STEM Building.",
-            lat: null,
-            lng: null
+            lat: 40.680559102623, 
+            lng: -74.22942265532447
         },
         vaughn_eames_parking: {
             id: "vaughn_eames_parking",
             name: "Vaughn-Eames Parking Lot",
             address: "Vaughn-Eames Hall, Morris Avenue, Union, NJ, USA",
             description: "Parking near Vaughn-Eames Hall and NAAB. 24-hour parking beyond orange curb.",
-            lat: null,
-            lng: null
+            lat: 40.676271149159646, 
+            lng: -74.2297874357604
         },
         visitor_parking: {
             id: "visitor_parking",
             name: "Visitor Parking Lot",
             address: "",
             description: "Parking lot for visitors without permits.",
-            lat: null,
-            lng: null
+            lat: 40.680583511444596, 
+            lng: -74.23600479625375
         },
         wilkins_parking: {
             id: "wilkins_parking",
             name: "Wilkins Theatre Parking Lot",
             address: "Wilkins Theatre, Morris Avenue, Union, NJ, USA",
             description: "Staff parking between Hutchinson Hall and Wilkins Theatre.",
-            lat: null,
-            lng: null
+            lat: 40.679432219381845, 
+            lng: -74.23227116133286
         }
     },
     food: {
