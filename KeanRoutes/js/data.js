@@ -395,22 +395,22 @@ const locations = {
             lng: -74.23227116133286
         }
     },
-    food: {
+     food: {
         chipotle: {
             id: "chipotle",
             name: "Chipotle Mexican Grill",
             address: "Chipotle Mexican Grill, Morris Avenue, Union, NJ, USA",
             description: "Chipotle has Mexican food in a build-your-own-meal style: burritos, quesadillas, bowls.",
-            lat: null,
-            lng: null
+            lat: 40.697738,
+            lng: -74.275562
         },
         coldstone: {
             id: "coldstone",
             name: "Cold Stone Creamery",
             address: "Cold Stone Creamery, Morris Avenue, Union, NJ, USA",
             description: "Ice cream, milkshakes, smoothies, frappes, cakes, and cookies.",
-            lat: null,
-            lng: null
+            lat: 40.67903086346734,
+            lng: -74.2061140057043
         },
         kean_kitchen: {
             id: "kean_kitchen",
@@ -425,72 +425,72 @@ const locations = {
             name: "Tropicana Diner and Bakery",
             address: "Tropicana Diner and Bakery, Morris Avenue, Elizabeth, NJ, USA",
             description: "Lunch, brunch, breakfast, dinner.",
-            lat: null,
-            lng: null
+            lat: 40.6790872,
+            lng: -74.2060929
         },
         mark_twain: {
             id: "mark_twain",
             name: "Mark Twain Diner & Restaurant",
             address: "Mark Twain Diner & Restaurant, Morris Avenue, Union, NJ, USA",
             description: "Breakfast, lunch, dinner.",
-            lat: null,
-            lng: null
+            lat: 40.6922353,
+            lng: -74.2541617
         },
         valenca: {
             id: "valenca",
             name: "Valença Restaurant",
             address: "Valenca Restaurant, Monroe Avenue, Elizabeth, NJ, USA",
-            description: "Portuguese and Spanish cuisine.",
-            lat: null,
-            lng: null
+            description: "Portuguese and Spanish cuisine including Suckling pig,Shrimp and garlic sauce, ribs chicken many ways etc.",
+            lat: 40.677009,
+            lng: -74.203409
         },
         smash_burger: {
             id: "smash_burger",
             name: "Smashburger",
             address: "Smashburger, Morris Avenue, Union, NJ, USA",
             description: "1000 Morris Ave, Union, NJ 07083.",
-            lat: null,
-            lng: null
+            lat: 40.6786124,
+            lng: -74.2339609
         },
         taco_bell: {
             id: "taco_bell",
             name: "Taco Bell",
             address: "Taco Bell, U.S. 22, Hillside, NJ, USA",
-            description: "Quesadillas, tacos, burritos, and more.",
-            lat: null,
-            lng: null
+            description: "Quesadillas, tacos, burritos, Baja blast and more.",
+            lat: 40.5420545,
+            lng: -74.3605199
         },
         china_star: {
             id: "china_star",
             name: "China Star",
             address: "China Star, North Avenue, Union, NJ, USA",
             description: "General Tso's chicken, dumplings, spring rolls, crab rangoons, and more.",
-            lat: null,
-            lng: null
+            lat: 40.6737783,
+            lng: -74.2301815
         },
         dairy_queen: {
             id: "dairy_queen",
             name: "Dairy Queen",
             address: "Dairy Queen Grill & Chill, Morris Avenue, Union, NJ, USA",
             description: "Ice cream and fast-food staples.",
-            lat: null,
-            lng: null
+            lat: 40.7147791,
+            lng: -74.253184
         },
         dunkin: {
             id: "dunkin",
             name: "Dunkin'",
             address: "Dunkin', Morris Avenue, Union, NJ, USA",
             description: "Coffee, breakfast, sandwiches.",
-            lat: null,
-            lng: null
+            lat: 40.6891189,
+            lng: -74.2458525
         },
         soul_factory: {
             id: "soul_factory",
             name: "Soul Food Factory",
             address: "Soul Food Factory, Morris Avenue, Union, NJ, USA",
-            description: "Southern-style food.",
-            lat: null,
-            lng: null
+            description: "Southern-style food. mac and cheese, fried chicken and cat fish, sea food",
+            lat: 40.696346,
+            lng: -74.268082
         }
     },
     chargingStations: {
