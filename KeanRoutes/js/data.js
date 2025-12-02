@@ -615,7 +615,7 @@ const locations = {
         basketball1: {
             id: "basketball1",
             name: "MBB vs Albright College",
-            address: "",
+            address: "Harwood Arena, Morris Ave, Union, NJ, USA",
             description: "Men's Basketball — December 16th, 2025 at 6:00 PM. Union, NJ.",
             lat: null,
             lng: null
@@ -655,7 +655,7 @@ const locations = {
         funk_meeting: {
             id: "funk",
             name: "FUNK General Body Meeting",
-            address: "",
+            address: "Miron Student Center, Kean University, Morris Avenue, Union, NJ, USA",
             description: "FUNK General Body Meeting — December 18th, 2025 at 7:30 PM. MSC 228.",
             lat: null,
             lng: null
@@ -679,7 +679,7 @@ const locations = {
         basketball2: {
             id: "basketball2",
             name: "MBB vs Ithaca College",
-            address: "",
+            address: "Canavan Arena, Castle Point Terrace, Hoboken, NJ, USA",
             description: "Men's Basketball Tournament — January 2nd, 2025 at 6:00 PM. Hoboken, NJ.",
             lat: null,
             lng: null
@@ -687,7 +687,7 @@ const locations = {
         basketball3: {
             id: "basketball3",
             name: "MBB vs Stevens College",
-            address: "",
+            address: "Canavan Arena, Castle Point Terrace, Hoboken, NJ, USA",
             description: "Men's Basketball Tournament — January 4th, 2025 at 4:00 PM. Hoboken, NJ.",
             lat: null,
             lng: null
@@ -695,7 +695,7 @@ const locations = {
         basketball4: {
             id: "basketball4",
             name: "WBB vs William Paterson College",
-            address: "",
+            address: "Harwood Arena, Morris Ave, Union, NJ, USA",
             description: "Women's Basketball — January 7th, 2025 at 5:30 PM. Union, NJ.",
             lat: null,
             lng: null
@@ -703,7 +703,7 @@ const locations = {
         basketball5: {
             id: "basketball5",
             name: "MBB vs William Paterson College",
-            address: "",
+            address: "Harwood Arena, Morris Ave, Union, NJ, USA",
             description: "Men's Basketball — January 7th, 2025 at 7:30 PM. Union, NJ.",
             lat: null,
             lng: null
