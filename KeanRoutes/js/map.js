@@ -2,6 +2,8 @@ let map, directionsService, directionsRenderer, autocomplete;
 let userLocation = null;
 let userMarker = null;
 let geocoder;
+let watchId = null;
+let lastUpdateTime = 0;
 function initMap() {
     geocoder = new google.maps.Geocoder();
     //Generating map, route, and displaying route.
@@ -93,7 +95,7 @@ function getRoute() {
         return;
     }
     //Places library setting route
-//    const place = autocomplete.getPlace();
+    const place = autocomplete.getPlace();
 //    if (!place || !place.geometry) {
 //        alert("Please select a valid destination from the list.");
 //        return;
@@ -105,6 +107,39 @@ function getRoute() {
     const mode = document.querySelector("input[name='mode']:checked").value;
     calculateAndDisplayRoute(userLocation, destination, mode);
 }
+function startLiveNavigation(destination, mode = "DRIVING") {
+    if (!navigator.geolocation) {
+        alert("Geolocation is not supported by your browser.");
+        return;
+    }
+    // Start watching user movement
+    watchId = navigator.geolocation.watchPosition(
+        (position) => {
+            const now = Date.now();
+            if (now - lastUpdateTime < 5000) return;
+            lastUpdateTime = now;
+            const origin = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+            calculateAndDisplayRoute(origin, destination, mode);
+        },
+        (error) => {
+            console.error("Geolocation error:", error);
+        },
+        {
+            enableHighAccuracy: true,
+            maximumAge: 0,
+            timeout: 10000
+        }
+    );
+}
+function stopLiveNavigation() {
+    if (watchId) {
+        navigator.geolocation.clearWatch(watchId);
+        watchId = null;
+    }
+}
 function calculateAndDisplayRoute(origin, destination, mode) {
     directionsService.route(
     {
@@ -114,14 +149,13 @@ function calculateAndDisplayRoute(origin, destination, mode) {
     },
     (response, status) => {
         if (status === "OK") {
-        directionsRenderer.setDirections(response);
-        const route = response.routes[0].legs[0];
-        document.getElementById("time").textContent = "Time: " + route.duration.text;
-        document.getElementById("distance").textContent = "Distance: " + route.distance.text;
+            directionsRenderer.setDirections(response);
+            const route = response.routes[0].legs[0];
+            document.getElementById("time").textContent = "Time: " + route.duration.text;
+            document.getElementById("distance").textContent = "Distance: " + route.distance.text;
         } else {
-        alert("Directions request failed due to " + status);
+            alert("Directions request failed due to " + status);
         }
     }
     );
-
 }
