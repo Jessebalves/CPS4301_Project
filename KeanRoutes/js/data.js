@@ -309,7 +309,7 @@ const locations = {
         hynes_hall_overflow: {
             id: "hynes_hall_overflow_parking",
             name: "Hynes Hall Overflow Parking Lot",
-            address: "",
+            address: "40.68292649579573, -74.23028414603303",
             description: "Extra parking space near Hynes Hall.",
             lat: 40.68292649579573, 
             lng: -74.23028414603303
@@ -317,7 +317,7 @@ const locations = {
         east_campus_parking: {
             id: "e_campus_parking",
             name: "East Campus Parking Lot",
-            address: "",
+            address: "40.680923997993226, -74.22464000136148",
             description: "Parking lot near Nathan Weiss Graduate College on East Campus.",
             lat: 40.680923997993226, 
             lng: -74.22464000136148
@@ -325,7 +325,7 @@ const locations = {
         east_campus_overflow: {
             id: "e_campus_overflow_parking",
             name: "East Campus Overflow Parking Lot",
-            address: "",
+            address: "40.68173554380717, -74.22535164402048",
             description: "Extra parking space on East Campus.",
             lat: 40.68173554380717, 
             lng: -74.22535164402048
@@ -381,7 +381,7 @@ const locations = {
         visitor_parking: {
             id: "visitor_parking",
             name: "Visitor Parking Lot",
-            address: "",
+            address: "40.680583511444596, -74.23600479625375",
             description: "Parking lot for visitors without permits.",
             lat: 40.680583511444596, 
             lng: -74.23600479625375
@@ -457,8 +457,8 @@ const locations = {
             name: "Taco Bell",
             address: "Taco Bell, U.S. 22, Hillside, NJ, USA",
             description: "Quesadillas, tacos, burritos, Baja blast and more.",
-            lat: 40.5420545,
-            lng: -74.3605199
+            lat: 40.69949044026829, 
+            lng: -74.23842992181216
         },
         china_star: {
             id: "china_star",
@@ -497,18 +497,18 @@ const locations = {
         charging_station_hutchinson: {
             id: "charging_station1",
             name: "Charging Station (Hutchinson Hall)",
-            address: "Hutchinson Hall, Kean University, Morris Avenue, Union, NJ, USA",
+            address: "40.67983615806235, -74.23320055942229",
             description: "Six charging stations located in front of Hutchinson Hall on the Main Campus.",
-            lat: null,
-            lng: null
+            lat: 40.67983615806235, 
+            lng: -74.23320055942229
         },
         charging_station_east_campus: {
             id: "charging_station2",
             name: "Charging Station (East Campus)",
-            address: "Kean University East Campus, North Avenue, Hillside, NJ, USA",
+            address: "40.680678577423365, -74.22373044817499",
             description: "Six charging stations located in the East Campus parking lot.",
-            lat: null,
-            lng: null
+            lat: 40.680678577423365, 
+            lng: -74.22373044817499
         }
     },
     convenienceStores: {
@@ -517,98 +517,98 @@ const locations = {
             name: "7-Eleven",
             address: "7-Eleven, Galloping Hill Road, Union, NJ, USA",
             description: "Pit stop for snacks and drinks.",
-            lat: null,
-            lng: null
+            lat: 40.67675220732043, 
+            lng: -74.26723715518908
         },
         jabes_mini_market: {
             id: "jabes",
             name: "Jabes Mini Market & Deli",
             address: "Jabes Mini Market & Deli, Magie Avenue, Union, NJ, USA",
             description: "Neighborhood convenience store and deli.",
-            lat: null,
-            lng: null
+            lat: 40.67270262521706, 
+            lng: -74.24851319201247
         },
         cvs_union: {
             id: "cvs1",
             name: "CVS Pharmacy (Union)",
-            address: "CVS, Morris Avenue, Union, NJ, USA",
+            address: "CVS Pharmacy, 1105A Morris Ave, Union, NJ 07083, USA",
             description: "Closest pharmacy and retail store for essentials and medicines.",
-            lat: null,
-            lng: null
+            lat: 40.683347595112664, 
+            lng: -74.23414360554344
         },
         cvs_elizabeth: {
             id: "cvs2",
             name: "CVS Pharmacy (Elizabeth)",
             address: "CVS, Westfield Avenue, Elizabeth, NJ, USA",
             description: "Pharmacy offering daily essentials, prescriptions, and photo services.",
-            lat: null,
-            lng: null
+            lat: 40.6656982959726, 
+            lng: -74.2313009623854
         },
         quick_shop: {
             id: "quick_shop",
             name: "Quick Shop",
             address: "Quick Shop, North Avenue, Union, NJ, USA",
             description: "Small business convenience store.",
-            lat: null,
-            lng: null
+            lat: 40.6720910792888, 
+            lng: -74.23136761352399
         },
         walgreens: {
             id: "walgreens",
             name: "Walgreens",
             address: "Walgreens, Newark Avenue, Elizabeth, NJ, USA",
             description: "Pharmacy offering prescriptions, immunizations, photo services, and essentials.",
-            lat: null,
-            lng: null
+            lat: 40.67728245715186,
+            lng: -74.21266954121037
         }
     },
     gasStation: {
         delta: {
             id: "delta",
             name: "Delta Gas Station",
-            address: "Delta, Magie Avenue, Union, NJ, USA",
+            address: "Delta, 981 Magie Ave, Union, NJ 07083, USA",
             description: "Gas station.",
-            lat: null,
-            lng: null
+            lat: 40.6732096927409, 
+            lng: -74.24384304196735
         },
         enrite: {
             id: "enrite",
             name: "Enrite Gas Station",
             address: "Enrite, West Grand Street, Elizabeth, NJ, USA",
             description: "Gas station.",
-            lat: null,
-            lng: null
+            lat: 40.66589286923886, 
+            lng: -74.22394265549585
         },
         exxon: {
             id: "exxon",
             name: "Exxon",
             address: "Exxon, Westfield Avenue, Elizabeth, NJ, USA",
             description: "Gas station + convenience store.",
-            lat: null,
-            lng: null
+            lat: 40.66531414410003, 
+            lng: -74.23389356949284
         },
         ez_quick: {
             id: "ez_quick",
             name: "EZ Quick",
             address: "EZ QUICK, Morris Avenue, Elizabeth, NJ, USA",
             description: "Gas station.",
-            lat: null,
-            lng: null
+            lat: 40.67078008760494, 
+            lng: -74.21973468862416
         },
         fuel_4: {
             id: "fuel",
             name: "Fuel 4 Gas & Diesel",
             address: "Fuel 4 Gas & Diesel, Morris Avenue, Union, NJ, USA",
             description: "Gas station.",
-            lat: null,
-            lng: null
+            lat: 40.68867823403995, 
+            lng: -74.24611266091154
         },
         shell: {
             id: "shell",
             name: "Shell",
             address: "Shell, Newark Avenue, Elizabeth, NJ, USA",
             description: "Gas station + convenience store.",
-            lat: null,
-            lng: null
+            lat: 40.67648620478183, 
+            lng: -74.21248678055021
         }
     },
     events: {
